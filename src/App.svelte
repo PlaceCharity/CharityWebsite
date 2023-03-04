@@ -21,6 +21,10 @@
         console.log(auth);
     }
 
+    function logOut() {
+        auth = null;
+    }
+
     onMount(refreshAuth);
 
     export let url = "";
@@ -31,7 +35,7 @@
         <div class="flex flex-col grow h-full">
             <Header auth={auth}/>
             <Route path="/" component={Home} />
-            <Route path="/login"><Login auth={auth} on:refreshAuth={refreshAuth} /></Route>
+            <Route path="/login"><Login auth={auth} on:refreshAuth={refreshAuth} on:logOut={logOut} /></Route>
             <Route component={NotFound} />
         </div>
         <Footer />

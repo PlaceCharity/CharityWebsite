@@ -3,8 +3,12 @@
 
     const dispatch = createEventDispatcher();
 
-    async function refreshAuth() {
+    function refreshAuth() {
         dispatch('refreshAuth');
+    }
+
+    function logOut() {
+        dispatch('logOut');
     }
 
     export let auth;
@@ -36,6 +40,9 @@
                 {:else}
                     <h2 class="card-title text-3xl font-patrickhand">You're already logged in!</h2>
                     <p class="text-xl font-patrickhand">Logged in as <b>{auth.pxls.username}</b>.</p>
+                    <button class="btn btn-outline btn-wide font-patrickhand normal-case text-xl" on:click={logOut}>
+                        Not you?
+                    </button>
                 {/if}
             </div>
         </div>
