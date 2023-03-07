@@ -36,7 +36,7 @@
         scaleX: 1,
         scaleY: 1,
         distanceMode: "0",
-        ditherMode: "1",
+        ditherMode: "0",
         dither: 64,
         alphaThreshold: 128,
         brightness: 0,
