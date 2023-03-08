@@ -26,13 +26,13 @@
 <div class="navbar bg-base-100">
     <input type="checkbox" id="localeSelector" class="modal-toggle" />
     <div class="modal">
-        <div class="modal-box">
+        <div class="modal-box font-patrickhand">
             <label for="localeSelector" class="btn btn-circle absolute top-0 right-0 m-4">
                 <span class="material-icons-round">close</span>
             </label>
-            <p class="font-bold text-xl">{$_("header.language")}</p>
+            <p class="font-bold text-2xl">{$_("header.language")}</p>
             <div class="form-control w-full max-w-xs my-4">
-                <select class="select select-bordered" value={$locale} on:change|preventDefault={handleLocaleChange}>
+                <select class="select select-bordered text-xl w-full" value={$locale} on:change|preventDefault={handleLocaleChange}>
                   <option value="en">{$_("header.languages.en")}</option>
                   <option value="de">{$_("header.languages.de")}</option>
                   <option value="es">{$_("header.languages.es")}</option>
