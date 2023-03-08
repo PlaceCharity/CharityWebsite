@@ -1,0 +1,109 @@
+{
+    "app": {
+        "name": "Charity"
+    },
+    "notFound": {
+        "title": "404",
+        "description": "Seite nicht gefunden"
+    },
+    "header": {
+        "login": "LOGIN",
+        "loggedIn": "Angemeldet als {username}",
+        "language": "Sprache",
+        "languages": {
+            "en": "Englisch",
+            "de": "Deutsch",
+            "tok": "Toki Pona"
+        }
+    },
+    "footer": {
+        "thirdParty": "Charity ist eine Website von Drittanbietern und nicht direkt mit Pxls verbunden.",
+        "createdBy": "Erstellt von {name}"
+    },
+    "login": {
+        "pxls": {
+            "label": "Bei Pxls anmelden",
+            "card.title": "Bei Pxls anmelden!",
+            "card.description": "Anmelden mit..."
+        },
+        "discord": {
+            "label": "Pxls mit Discord verknüpfen",
+            "card.title": "In Pxls angemeldet als {username}.",
+            "card.description": "{username} mit Discord verknüpfen...",
+            "card.button": "Mit Discord anmelden"
+        },
+        "complete": {
+            "label": "Fertig!",
+            "card.title": "Sie sind bereits Angemeldet!",
+            "card.description": "Angemeldet als {username}.",
+            "card.button": "Nicht Sie?"
+        }
+    },
+    "home": {
+        "beta": "Charity ist in der Beta! Einige Funktionen sind möglicherweise nicht vollständig!",
+        "description": "Pxls Templates, Informationen, und Hilfsmittel",
+        "createTemplate": "Erstelle ein Template",
+        "addDiscordBot": "Fügen Sie unseren Discord-Bot hinzu"
+    },
+    "pixelization": {
+        "name": "Verpixelung",
+        "image": {
+            "original": "ORIGINAL",
+            "pixelated": "PIXELATED",
+            "upload": "Bild hier ablegen oder zum Hochladen anklicken",
+            "download": "Herunterladen"
+        },
+        "options": {
+            "sample": {
+                "name": "MUSTER",
+                "absolute": {
+                    "name": "ABSOLUT",
+                    "width": "Breite",
+                    "height": "Höhe"
+                },
+                "relative": {
+                    "name": "RELATIV",
+                    "scaleX": "X Skalierung",
+                    "scaleY": "Y Skalierung"
+                }
+            },
+            "colors": {
+                "name": "FARBEN",
+                "colorDistanceAlg": {
+                    "label": "Farbabstandsalgorithmus",
+                    "rgb": "RGB (PxlsFiddle \"Fast\")",
+                    "cie76": "CIE76",
+                    "cie94": "CIE94",
+                    "ciede2000": "CIEDE2000 (PxlsFiddle \"Accurate\")",
+                    "xyz": "XYZ",
+                    "ycc": "YCC",
+                    "yiq": "YIQ",
+                    "yuv": "YUV",
+                    "kMeans": "K-Means (Empfohlen!)"
+                },
+                "ditherAlg": {
+                    "label": "Dithering Algorithmus",
+                    "none": "Kein Dithering",
+                    "bayer8x8": "Bayer 8x8",
+                    "bayer4x4": "Bayer 4x4",
+                    "bayer2x2": "Bayer 2x2",
+                    "cluster8x8": "Cluster 8x8",
+                    "cluster4x4": "Cluster 4x4",
+                    "floydSteinbergPerComponent": "Floyd-Steinberg (Pro Komponente)",
+                    "floydSteinbergDistributedError": "Floyd-Steinberg (Verteilter Fehler)"
+                },
+                "ditherAmount": "Dither-Betrag",
+                "alphaThreshold": "Alpha-Schwelle"
+            },
+            "process": {
+                "name": "PROZESS",
+                "brightness": "Helligkeit",
+                "contrast": "Kontrast",
+                "saturation": "Sättigung",
+                "gamma": "Gamma",
+                "sharpness": "Schärfe",
+                "hue": "Farbton"
+            }
+        }
+    }
+}

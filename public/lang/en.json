@@ -12,6 +12,7 @@
         "language": "Language",
         "languages": {
             "en": "English",
+            "de": "German",
             "tok": "Toki Pona"
         }
     },

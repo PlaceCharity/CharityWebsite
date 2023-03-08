@@ -34,6 +34,7 @@
             <div class="form-control w-full max-w-xs my-4">
                 <select class="select select-bordered" value={$locale} on:change|preventDefault={handleLocaleChange}>
                   <option value="en">{$_("header.languages.en")}</option>
+                  <option value="de">{$_("header.languages.de")}</option>
                   <option value="tok">{$_("header.languages.tok")}</option>
                 </select>
               </div>
