@@ -1,0 +1,108 @@
+{
+    "app": {
+        "name": "ilo Sawisi"
+    },
+    "notFound": {
+        "title": "404",
+        "description": "lipu ni li lon ala"
+    },
+    "header": {
+        "login": "o pana e nimi sina",
+        "loggedIn": "sina jan {username}",
+        "language": "toki",
+        "languages": {
+            "en": "toki Inli",
+            "tok": "toki pona"
+        }
+    },
+    "footer": {
+        "thirdParty": "ilo Pxls la, ilo Sawisi li ilo ante. ilo Pxls li lawa ala e ilo Sawisi.",
+        "createdBy": "jan {name} li mama pi ilo ni"
+    },
+    "login": {
+        "pxls": {
+            "label": "o lon lipu Pxls",
+            "card.title": "o lon lipu Pxls!",
+            "card.description": "o pana e nimi sina tawa ona kepeken..."
+        },
+        "discord": {
+            "label": "o wan e ilo Pxls e ilo Siko",
+            "card.title": "lipu Pxls la, sina jan {username}.",
+            "card.description": "o wan e ilo Pxls e ilo Siko...",
+            "card.button": "o kepeken ilo Siko"
+        },
+        "complete": {
+            "label": "pini!",
+            "card.title": "mi sona e nimi sina!",
+            "card.description": "sina jan {username}.",
+            "card.button": "o pana e nimi ante"
+        }
+    },
+    "home": {
+        "beta": "ilo Sawisi li pini ala! ijo mute li ken ante!",
+        "description": "ilo mute pi lipu Pxls",
+        "createTemplate": "o pali e ilo sitelen",
+        "addDiscordBot": "o jo e ilo pi ilo Siko"
+    },
+    "pixelization": {
+        "name": "o leko e sitelen",
+        "image": {
+            "original": "sitelen open",
+            "pixelated": "sitelen leko",
+            "upload": "o pana e sitelen open tawa mi",
+            "download": "o jo e sitelen leko"
+        },
+        "options": {
+            "sample": {
+                "name": "suli",
+                "absolute": {
+                    "name": "nanpa leko",
+                    "width": "nanpa poka",
+                    "height": "nanpa sewi"
+                },
+                "relative": {
+                    "name": "nanpa kipisi",
+                    "scaleX": "nanpa poka",
+                    "scaleY": "nanpa sewi"
+                }
+            },
+            "colors": {
+                "name": "kule",
+                "colorDistanceAlg": {
+                    "label": "nasin pi weka kule",
+                    "rgb": "nasin RGB",
+                    "cie76": "nasin CIE76",
+                    "cie94": "nasin CIE94",
+                    "ciede2000": "nasin CIEDE2000",
+                    "xyz": "nasin XYZ",
+                    "ycc": "nasin YCC",
+                    "yiq": "nasin YIQ",
+                    "yuv": "nasin YUV",
+                    "kMeans": "nasin K-Means (o lukin e ni!)"
+                },
+                "ditherAlg": {
+                    "label": "nasa pi kule insa",
+                    "none": "o nasa ala",
+                    "bayer8x8": "nasa Bayer 8x8",
+                    "bayer4x4": "nasa Bayer 4x4",
+                    "bayer2x2": "nasa Bayer 2x2",
+                    "cluster8x8": "nasa Cluster 8x8",
+                    "cluster4x4": "nasa Cluster 4x4",
+                    "floydSteinbergPerComponent": "nasa Floyd-Steinberg (nanpa wan)",
+                    "floydSteinbergDistributedError": "nasa Floyd-Steinberg (nanpa tu)"
+                },
+                "ditherAmount": "suli nasa",
+                "alphaThreshold": "ken pi ala kule"
+            },
+            "process": {
+                "name": "ante",
+                "brightness": "suli walo",
+                "contrast": "suli ante",
+                "saturation": "suli kule",
+                "gamma": "suli pimeja",
+                "sharpness": "suli selo",
+                "hue": "ante kule"
+            }
+        }
+    }
+}

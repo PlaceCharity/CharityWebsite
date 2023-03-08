@@ -1,4 +1,5 @@
 <script>
+    import { _ } from "../../services/i18n";
     import { createEventDispatcher } from 'svelte';
 
     const dispatch = createEventDispatcher();
@@ -18,8 +19,8 @@
         <div class="card md:min-w-96 bg-neutral text-neutral-content mx-4">
             <div class="card-body items-center text-center">
                 {#if auth === null || auth.pxls === null || auth === undefined || auth.pxls === undefined}
-                    <h2 class="card-title text-3xl font-patrickhand">Log into Pxls!</h2>
-                    <p class="text-xl font-patrickhand">Log in with...</p>
+                    <h2 class="card-title text-3xl font-patrickhand">{$_("login.pxls.card.title")}</h2>
+                    <p class="text-xl font-patrickhand">{$_("login.pxls.card.description")}</p>
                     <div class="card-actions justify-center">
                         <a class="btn btn-ghost" href="https://pxls.space/signin/discord?redirect=1" target="_blank" rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em" viewBox="0 0 24 24"><path fill="currentColor" d="M19.27 5.33C17.94 4.71 16.5 4.26 15 4a.09.09 0 0 0-.07.03c-.18.33-.39.76-.53 1.09a16.09 16.09 0 0 0-4.8 0c-.14-.34-.35-.76-.54-1.09c-.01-.02-.04-.03-.07-.03c-1.5.26-2.93.71-4.27 1.33c-.01 0-.02.01-.03.02c-2.72 4.07-3.47 8.03-3.1 11.95c0 .02.01.04.03.05c1.8 1.32 3.53 2.12 5.24 2.65c.03.01.06 0 .07-.02c.4-.55.76-1.13 1.07-1.74c.02-.04 0-.08-.04-.09c-.57-.22-1.11-.48-1.64-.78c-.04-.02-.04-.08-.01-.11c.11-.08.22-.17.33-.25c.02-.02.05-.02.07-.01c3.44 1.57 7.15 1.57 10.55 0c.02-.01.05-.01.07.01c.11.09.22.17.33.26c.04.03.04.09-.01.11c-.52.31-1.07.56-1.64.78c-.04.01-.05.06-.04.09c.32.61.68 1.19 1.07 1.74c.03.01.06.02.09.01c1.72-.53 3.45-1.33 5.25-2.65c.02-.01.03-.03.03-.05c.44-4.53-.73-8.46-3.1-11.95c-.01-.01-.02-.02-.04-.02zM8.52 14.91c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.84 2.12-1.89 2.12zm6.97 0c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.83 2.12-1.89 2.12z"></path></svg></a>
                         <a class="btn btn-ghost" href="https://pxls.space/signin/vk?redirect=1" target="_blank" rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M23.45 5.948c.166-.546 0-.948-.795-.948H20.03c-.668 0-.976.347-1.143.73c0 0-1.335 3.196-3.226 5.272c-.612.602-.89.793-1.224.793c-.167 0-.418-.191-.418-.738V5.948c0-.656-.184-.948-.74-.948H9.151c-.417 0-.668.304-.668.593c0 .621.946.765 1.043 2.513v3.798c0 .833-.153.984-.487.984c-.89 0-3.055-3.211-4.34-6.885C4.45 5.288 4.198 5 3.527 5H.9c-.75 0-.9.347-.9.73c0 .682.89 4.07 4.145 8.551C6.315 17.341 9.37 19 12.153 19c1.669 0 1.875-.368 1.875-1.003v-2.313c0-.737.158-.884.687-.884c.39 0 1.057.192 2.615 1.667C19.11 18.216 19.403 19 20.405 19h2.625c.75 0 1.126-.368.91-1.096c-.238-.724-1.088-1.775-2.215-3.022c-.612-.71-1.53-1.475-1.809-1.858c-.389-.491-.278-.71 0-1.147c0 0 3.2-4.426 3.533-5.929Z" clip-rule="evenodd"></path></svg></a>
@@ -29,27 +30,27 @@
                     </div>
                     <button class="btn btn-ghost absolute top-0 right-0 m-2" on:click={refreshAuth}><span class="material-icons-round">refresh</span></button>
                 {:else if auth.discord === null || auth.discord === undefined}
-                    <h2 class="card-title gap-0 text-3xl font-patrickhand">Logged into Pxls as&nbsp;<b>{auth.pxls.username}</b>.</h2>
-                    <p class="text-xl font-patrickhand">Link <b>{auth.pxls.username}</b> with Discord...</p>
+                    <h2 class="card-title gap-0 text-3xl font-patrickhand">{$_("login.discord.card.title", {values: { username: auth.pxls.username}})}</h2>
+                    <p class="text-xl font-patrickhand">{$_("login.discord.card.description", {values: { username: auth.pxls.username}})}</p>
                     <div class="card-actions justify-center">
                         <a href="https://charity.pxls.space/api/auth" class="btn btn-outline btn-wide text-neutral-content font-patrickhand normal-case text-xl">
                             <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em" viewBox="0 0 24 24"><path fill="currentColor" d="M19.27 5.33C17.94 4.71 16.5 4.26 15 4a.09.09 0 0 0-.07.03c-.18.33-.39.76-.53 1.09a16.09 16.09 0 0 0-4.8 0c-.14-.34-.35-.76-.54-1.09c-.01-.02-.04-.03-.07-.03c-1.5.26-2.93.71-4.27 1.33c-.01 0-.02.01-.03.02c-2.72 4.07-3.47 8.03-3.1 11.95c0 .02.01.04.03.05c1.8 1.32 3.53 2.12 5.24 2.65c.03.01.06 0 .07-.02c.4-.55.76-1.13 1.07-1.74c.02-.04 0-.08-.04-.09c-.57-.22-1.11-.48-1.64-.78c-.04-.02-.04-.08-.01-.11c.11-.08.22-.17.33-.25c.02-.02.05-.02.07-.01c3.44 1.57 7.15 1.57 10.55 0c.02-.01.05-.01.07.01c.11.09.22.17.33.26c.04.03.04.09-.01.11c-.52.31-1.07.56-1.64.78c-.04.01-.05.06-.04.09c.32.61.68 1.19 1.07 1.74c.03.01.06.02.09.01c1.72-.53 3.45-1.33 5.25-2.65c.02-.01.03-.03.03-.05c.44-4.53-.73-8.46-3.1-11.95c-.01-.01-.02-.02-.04-.02zM8.52 14.91c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.84 2.12-1.89 2.12zm6.97 0c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.83 2.12-1.89 2.12z"></path></svg>
-                            &nbsp;Login with Discord
+                            &nbsp;{$_("login.discord.card.button")}
                         </a>
                     </div>
                 {:else}
-                    <h2 class="card-title text-3xl font-patrickhand">You're already logged in!</h2>
-                    <p class="text-xl font-patrickhand">Logged in as <b>{auth.pxls.username}</b>.</p>
+                    <h2 class="card-title text-3xl font-patrickhand">{$_("login.complete.card.title")}</h2>
+                    <p class="text-xl font-patrickhand">{$_("login.complete.card.description", {values: { username: auth.pxls.username}})}</p>
                     <button class="btn btn-outline btn-wide text-neutral-content font-patrickhand normal-case text-xl" on:click={logOut}>
-                        Not you?
+                        {$_("login.complete.card.button")}
                     </button>
                 {/if}
             </div>
         </div>
         <ul class="steps md:steps-vertical mx-4 text-xl font-patrickhand">
-            <li class="step step-primary">Log into Pxls</li>
-            <li class="step {auth !== null && auth.pxls !== null && auth !== undefined && auth.pxls !== undefined ? 'step-primary' : ''}">Link Pxls to Discord</li>
-            <li class="step {auth !== null && auth.pxls !== null && auth.discord !== null && auth !== undefined && auth.pxls !== undefined && auth.discord !== undefined ? 'step-primary' : ''}">Complete!</li>
+            <li class="step step-primary">{$_("login.pxls.label")}</li>
+            <li class="step {auth !== null && auth.pxls !== null && auth !== undefined && auth.pxls !== undefined ? 'step-primary' : ''}">{$_("login.discord.label")}</li>
+            <li class="step {auth !== null && auth.pxls !== null && auth.discord !== null && auth !== undefined && auth.pxls !== undefined && auth.discord !== undefined ? 'step-primary' : ''}">{$_("login.complete.label")}</li>
         </ul>
     </div>
     <svg class="bg-base-100" viewBox="0 -25 1200 145" preserveAspectRatio="none">

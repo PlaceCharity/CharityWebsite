@@ -1,10 +1,14 @@
+<script>
+    import { _ } from "../services/i18n";
+</script>
+
 <div class="flex flex-col grow">
     <div class="grow">
         <h1 class="font-comingsans text-8xl tracking-wide mb-8 text-center">
-            404
+            {$_("notFound.title")}
         </h1>
         <p class="font-patrickhand text-4xl mb-8 text-center">
-            Page Not Found
+            {$_("notFound.description")}
         </p>
     </div>
     <svg class="bg-base-100" viewBox="0 -25 1200 145" preserveAspectRatio="none">
