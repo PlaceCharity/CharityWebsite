@@ -20,8 +20,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'comingsans': ['comingsans', 'sans-serif'],
-        'patrickhand': ['Patrick Hand', 'cursive']
+        'comingsans': ['Coming Sans', 'Shantell Sans', 'cursive'],
+        'patrickhand': ['Patrick Hand', 'Neucha', 'cursive']
       }
     }
   },

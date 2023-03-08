@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Neucha&family=Patrick+Hand&family=Shantell+Sans:wght@700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,7 +6,7 @@
 
 @layer base {
     @font-face {
-        font-family: "comingsans";
+        font-family: "Coming Sans";
         src: url('/assets/fonts/comingsans.ttf');
     }
 }
