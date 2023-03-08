@@ -35,6 +35,7 @@
                 <select class="select select-bordered text-xl w-full" value={$locale} on:change|preventDefault={handleLocaleChange}>
                   <option value="en">{$_("header.languages.en")}</option>
                   <option value="de">{$_("header.languages.de")}</option>
+                  <option value="ru">{$_("header.languages.ru")}</option>
                   <option value="es">{$_("header.languages.es")}</option>
                   <option value="tok">{$_("header.languages.tok")}</option>
                 </select>

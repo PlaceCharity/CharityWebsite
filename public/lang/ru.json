@@ -1,0 +1,114 @@
+{
+    "app": {
+        "name": "Чарити"
+    },
+    "notFound": {
+        "title": "404",
+        "description": "Страница не найдена"
+    },
+    "header": {
+        "login": "ВОЙТИ",
+        "loggedIn": "Вы вошли как {username}",
+        "language": "Язык",
+        "languages": {
+            "en": "Английский",
+            "fr": "Французский",
+            "de": "Немецкий",
+            "ru": "Русский",
+            "es": "Испанский",
+            "sv": "Шведский",
+            "tok": "Токи Пона"
+        }
+    },
+    "footer": {
+        "thirdParty": "Чарити является сторонним веб-сайтом. Он не имеет прямого отношения к Pxls.",
+        "createdBy": "Создано {name}"
+    },
+    "login": {
+        "pxls": {
+            "label": "Войти в Pxls",
+            "card.title": "Войти в Pxls!",
+            "card.description": "Войти с помощью..."
+        },
+        "discord": {
+            "label": "Привязать Pxls к Discord",
+            "card.title": "Вы вошли в Pxls как {username}.",
+            "card.description": "Привязать {username} к Discord...",
+            "card.button": "Войти с помощью Discord"
+        },
+        "complete": {
+            "label": "Готово!",
+            "card.title": "Вы уже вошли!",
+            "card.description": "Вы вошли как {username}.",
+            "card.button": "Это не вы?"
+        }
+    },
+    "home": {
+        "beta": "Чарити находится в бета-версии! Некоторые функции могут быть не завершены!",
+        "description": "Шаблоны Pxls, информация и утилиты",
+        "createTemplate": "Создать шаблон",
+        "addDiscordBot": "Добавить нашего Discord-бота"
+    },
+    "pixelization": {
+        "name": "Пикселизация",
+        "image": {
+            "original": "ОРИГИНАЛ",
+            "pixelated": "ПИКСЕЛИЗАЦИЯ",
+            "upload": "Перетащите файл сюда, или кликните для загрузки",
+            "download": "Скачать"
+        },
+        "options": {
+            "sample": {
+                "name": "ОБРАЗЕЦ",
+                "absolute": {
+                    "name": "АБСОЛЮТНАЯ",
+                    "width": "Ширина",
+                    "height": "Высота"
+                },
+                "relative": {
+                    "name": "ОТНОСИТЕЛЬНАЯ",
+                    "scaleX": "Шкала X",
+                    "scaleY": "Шкала Y"
+                }
+            },
+            "colors": {
+                "name": "ЦВЕТА",
+                "colorDistanceAlg": {
+                    "label": "Алгоритм цветового отличия",
+                    "rgb": "RGB (PxlsFiddle \"Быстрый\")",
+                    "cie76": "CIE76",
+                    "cie94": "CIE94",
+                    "ciede2000": "CIEDE2000 (PxlsFiddle \"Точный\")",
+                    "xyz": "XYZ",
+                    "ycc": "YCC",
+                    "yiq": "YIQ",
+                    "yuv": "YUV",
+                    "kMeans": "K-Средние (Рекомендовано!)"
+                },
+                "ditherAlg": {
+                    "label": "Алгоритм дизеринга",
+                    "none": "Без дизеринга",
+                    "bayer8x8": "Байер 8x8",
+                    "bayer4x4": "Байер 4x4",
+                    "bayer2x2": "Байер 2х2",
+                    "cluster8x8": "Кластер 8x8",
+                    "cluster4x4": "Кластер 4x4",
+                    "floydSteinbergPerComponent": "Флойд-Штейнберг (по частям)",
+                    "floydSteinbergDistributedError": "Флойд-Штейнберг (псевдосмешение)"
+                },
+                "ditherAmount": "Кол-во дизеринга",
+                "alphaThreshold": "Альфа-порог"
+            },
+            "process": {
+                "name": "ОБРАБОТКА",
+                "brightness": "Яркость",
+                "contrast": "Контраст",
+                "saturation": "Насыщенность",
+                "gamma": "Гамма",
+                "sharpness": "Резкость",
+                "hue": "Оттенок"
+            },
+            "reset": "СБРОС"
+        }
+    }
+}
