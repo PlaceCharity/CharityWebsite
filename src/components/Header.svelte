@@ -48,7 +48,7 @@
             <img class="h-full" src="assets/images/charity.png" alt="Charity Logo">
         </Link>
     </div>
-    <Link class="btn font-patrickhand text-lg normal-case {auth !== null && auth.pxls !== null && auth.discord !== null && auth !== undefined && auth.pxls !== undefined && auth.discord !== undefined ? 'btn-ghost' : ''}" to="/login">
+    <Link class="btn font-patrickhand font-normal text-lg normal-case {auth !== null && auth.pxls !== null && auth.discord !== null && auth !== undefined && auth.pxls !== undefined && auth.discord !== undefined ? 'btn-ghost' : ''}" to="/login">
     {#if auth !== null && auth.pxls !== null && auth.discord !== null && auth !== undefined && auth.pxls !== undefined && auth.discord !== undefined}
         {$_("header.loggedIn", {values: { username: auth.pxls.username}})}
     {:else}
