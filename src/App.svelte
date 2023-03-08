@@ -19,7 +19,7 @@
     let auth = null;
 
     async function refreshAuth() {
-        const response = await fetch('http://localhost:1677/api/whoami', {
+        const response = await fetch('https://charity.pxls.space/api/whoami', {
             method: 'GET',
             credentials: 'include'
         });
