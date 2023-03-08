@@ -37,6 +37,7 @@
                   <option value="de">{$_("header.languages.de")}</option>
                   <option value="ru">{$_("header.languages.ru")}</option>
                   <option value="es">{$_("header.languages.es")}</option>
+                  <option value="sv">{$_("header.languages.sv")}</option>
                   <option value="tok">{$_("header.languages.tok")}</option>
                 </select>
               </div>

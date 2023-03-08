@@ -1,0 +1,114 @@
+{
+    "app": {
+        "name": "Charity"
+    },
+    "notFound": {
+        "title": "404",
+        "description": "Sidan kunde inte hittas"
+    },
+    "header": {
+        "login": "LOGGA IN",
+        "loggedIn": "Inloggad som {username}",
+        "language": "Språk",
+        "languages": {
+            "en": "Engelska",
+            "fr": "Franska",
+            "de": "Tyska",
+            "ru": "Ryska",
+            "es": "Spanska",
+            "sv": "Svenska",
+            "tok": "Toki Pona"
+        }
+    },
+    "footer": {
+        "thirdParty": "Charity är en tredje parti hemsida. Den är inte direkt kopplad till Pxls.",
+        "createdBy": "Skapad av {name}"
+    },
+    "login": {
+        "pxls": {
+            "label": "Logga in på Pxls",
+            "card.title": "Logga in på Pxls!",
+            "card.description": "Logga in med..."
+        },
+        "discord": {
+            "label": "Länk Pxls till Discord",
+            "card.title": "Inloggad till Pxls som {username}.",
+            "card.description": "Länk {username} med Discord...",
+            "card.button": "Logga in med Discord"
+        },
+        "complete": {
+            "label": "Komplett!",
+            "card.title": "Du är redan inloggad!",
+            "card.description": "Inloggad som {username}.",
+            "card.button": "Inte du?"
+        }
+    },
+    "home": {
+        "beta": "Charity är i Beta! Vissa funktioner kan vara icke kompletta!",
+        "description": "Pxls Mallar, Information, och Verktyg",
+        "createTemplate": "Skapa en Mall",
+        "addDiscordBot": "Lägg till vår Discord bot"
+    },
+    "pixelization": {
+        "name": "Pixelisering",
+        "image": {
+            "original": "ORIGINAL",
+            "pixelated": "PIXELERAD",
+            "upload": "Släpp bilden här eller klicka för att ladda upp",
+            "download": "Ladda ner"
+        },
+        "options": {
+            "sample": {
+                "name": "SAMPLA",
+                "absolute": {
+                    "name": "ABSOLUT",
+                    "width": "Bredd",
+                    "height": "Höjd"
+                },
+                "relative": {
+                    "name": "RELATIVT",
+                    "scaleX": "Skala X",
+                    "scaleY": "Skala Y"
+                }
+            },
+            "colors": {
+                "name": "FÄRGER",
+                "colorDistanceAlg": {
+                    "label": "Färg Distansalgoritm",
+                    "rgb": "RGB (PxlsFiddle \"Snabbt\")",
+                    "cie76": "CIE76",
+                    "cie94": "CIE94",
+                    "ciede2000": "CIEDE2000 (PxlsFiddle \"Korrekt\")",
+                    "xyz": "XYZ",
+                    "ycc": "YCC",
+                    "yiq": "YIQ",
+                    "yuv": "YUV",
+                    "kMeans": "K-Means (Rekommenderas!)"
+                },
+                "ditherAlg": {
+                    "label": "Dither Algoritm",
+                    "none": "Ingen Dither",
+                    "bayer8x8": "Bayer 8x8",
+                    "bayer4x4": "Bayer 4x4",
+                    "bayer2x2": "Bayer 2x2",
+                    "cluster8x8": "Kluster 8x8",
+                    "cluster4x4": "Kluster 4x4",
+                    "floydSteinbergPerComponent": "Floyd-Steinberg (Per Komponent)",
+                    "floydSteinbergDistributedError": "Floyd-Steinberg (Fördelat Fel)"
+                },
+                "ditherAmount": "Dither Mängd",
+                "alphaThreshold": "Alfa Tröskel"
+            },
+            "process": {
+                "name": "PROCESSA",
+                "brightness": "Ljusstyrka",
+                "contrast": "Kontrast",
+                "saturation": "Mättnad",
+                "gamma": "Gamma",
+                "sharpness": "Skärpning",
+                "hue": "Nyans"
+            },
+            "reset": "ÅTERSTÄLL"
+        }
+    }
+}
