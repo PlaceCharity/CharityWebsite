@@ -12,7 +12,11 @@
         "language": "Sprache",
         "languages": {
             "en": "Englisch",
+            "fr": "French",
             "de": "Deutsch",
+            "ru": "Russian",
+            "es": "Spanish",
+            "sv": "Swedish",
             "tok": "Toki Pona"
         }
     },
@@ -43,7 +47,7 @@
         "beta": "Charity ist in der Beta! Einige Funktionen sind möglicherweise nicht vollständig!",
         "description": "Pxls Templates, Informationen, und Hilfsmittel",
         "createTemplate": "Erstelle ein Template",
-        "addDiscordBot": "unseren Discord-Bot einladen"
+        "addDiscordBot": "Unseren Discord-Bot einladen"
     },
     "pixelization": {
         "name": "Verpixelung",
@@ -103,7 +107,8 @@
                 "gamma": "Gamma",
                 "sharpness": "Schärfe",
                 "hue": "Farbton"
-            }
+            },
+            "reset": "RESET"
         }
     }
 }

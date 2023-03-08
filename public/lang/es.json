@@ -1,0 +1,114 @@
+{
+    "app": {
+        "name": "Charity"
+    },
+    "notFound": {
+        "title": "404",
+        "description": "Página No Encontrada"
+    },
+    "header": {
+        "login": "ACCEDER",
+        "loggedIn": "Te has conectado como {username}",
+        "language": "Lenguaje",
+        "languages": {
+            "en": "Ingles",
+            "fr": "Frances",
+            "de": "Aleman",
+            "ru": "Ruso",
+            "es": "Español",
+            "sv": "Sueco",
+            "tok": "Toki Pona"
+        }
+    },
+    "footer": {
+        "thirdParty": "Charity es un sitio web externo. No está directamente afiliado a Pxls.",
+        "createdBy": "Creado por {name}"
+    },
+    "login": {
+        "pxls": {
+            "label": "Iniciar sesión en Pxls",
+            "card.title": "¡Inicie sesión en Pxls!",
+            "card.description": "Ingresar con..."
+        },
+        "discord": {
+            "label": "Vinculá Pxls a Discord",
+            "card.title": "Sesión iniciada en Pxls como {username}.",
+            "card.description": "Vinculá {username} con Discord...",
+            "card.button": "Iniciar sesión con Discord"
+        },
+        "complete": {
+            "label": "¡Completado!",
+            "card.title": "¡Ya has iniciado sesión!",
+            "card.description": "Sesión iniciada como {username}.",
+            "card.button": "¿No eres tú?"
+        }
+    },
+    "home": {
+        "beta": "¡Charity está en Beta! ¡Algunas características pueden no estar completas!",
+        "description": "Plantillas de Pxls, información y Utilidades",
+        "createTemplate": "Crear una Plantilla",
+        "addDiscordBot": "Agrega nuestro bot a Discord"
+    },
+    "pixelization": {
+        "name": "Pixelización",
+        "image": {
+            "original": "ORIGINAL",
+            "pixelated": "PIXELIZADO",
+            "upload": "Arrastre el archive o haga clic para subir la imagen",
+            "download": "Descargar"
+        },
+        "options": {
+            "sample": {
+                "name": "AJUSTAR",
+                "absolute": {
+                    "name": "ABSOLUTO",
+                    "width": "Largo",
+                    "height": "Ancho"
+                },
+                "relative": {
+                    "name": "RELATIVO",
+                    "scaleX": "Escala en X",
+                    "scaleY": "Escala en Y"
+                }
+            },
+            "colors": {
+                "name": "COLORES",
+                "colorDistanceAlg": {
+                    "label": "Algoritmo de Distancia entre Colores",
+                    "rgb": "RGB (el \"Fast\" de PxlsFiddle)",
+                    "cie76": "CIE76",
+                    "cie94": "CIE94",
+                    "ciede2000": "CIEDE2000 (el \"Accurate\" de PxlsFiddle)",
+                    "xyz": "XYZ",
+                    "ycc": "YCC",
+                    "yiq": "YIQ",
+                    "yuv": "YUV",
+                    "kMeans": "K-Medias (¡Recomendado!)"
+                },
+                "ditherAlg": {
+                    "label": "Algoritmo de Tramado",
+                    "none": "Sin Tramado",
+                    "bayer8x8": "Bayer 8x8",
+                    "bayer4x4": "Bayer 4x4",
+                    "bayer2x2": "Bayer 2x2",
+                    "cluster8x8": "Grupo 8x8",
+                    "cluster4x4": "Clúster 4x4",
+                    "floydSteinbergPerComponent": "Floyd-Steinberg (Por Componente)",
+                    "floydSteinbergDistributedError": "Floyd-Steinberg (Error Distribuido)"
+                },
+                "ditherAmount": "Cantidad de Tramado",
+                "alphaThreshold": "Umbral Alfa"
+            },
+            "process": {
+                "name": "PROCESAR",
+                "brightness": "Brillo",
+                "contrast": "Contraste",
+                "saturation": "Saturación",
+                "gamma": "Gamma",
+                "sharpness": "Nitidez",
+                "hue": "Tono"
+            },
+            "reset": "REINICIAR"
+        }
+    }
+}

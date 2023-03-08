@@ -12,7 +12,11 @@
         "language": "toki",
         "languages": {
             "en": "toki Inli",
+            "fr": "toki Kanse",
             "de": "toki Tosi",
+            "ru": "toki Losi",
+            "es": "toki Epanja",
+            "sv": "toki Sensa",
             "tok": "toki pona"
         }
     },
@@ -99,11 +103,12 @@
                 "name": "ante",
                 "brightness": "suli walo",
                 "contrast": "suli ante",
-                "saturation": "suli kule",
+                "saturation": "suli ante",
                 "gamma": "suli pimeja",
                 "sharpness": "suli selo",
                 "hue": "ante kule"
-            }
+            },
+            "reset": "o open sin"
         }
     }
 }
