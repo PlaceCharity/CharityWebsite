@@ -54,7 +54,7 @@
         "image": {
             "original": "ORIGINAL",
             "pixelated": "PIXELIZADO",
-            "upload": "Arrastre el archive o haga clic para subir la imagen",
+            "upload": "Arrastra la imagen aquí o haz clic para subir",
             "download": "Descargar"
         },
         "options": {
