@@ -10,6 +10,27 @@
         dispatch('updatePixelated');
     }
 
+    function reset() {
+        options = {
+            scaleMode: 1,
+            width: 128,
+            height:128,
+            scaleX: 1,
+            scaleY: 1,
+            distanceMode: "0",
+            ditherMode: "0",
+            dither: 64,
+            alphaThreshold: 128,
+            brightness: 0,
+            contrast: 0,
+            saturation: 100,
+            gamma: 100,
+            sharpen: 0,
+            hue: 0
+        }
+        updatePixelated();
+    }
+
     let tab = 'colors';
 
     export let options;
@@ -132,6 +153,11 @@
                     <input type="range" min="-360" max="360" bind:value={options.hue} on:change={updatePixelated} class="range" />
                 </div>
             </div>
+        </div>
+        <div class="flex flex-row w-full justify-end">
+            <button class="btn normal-case font-patrickhand text-xl my-2" on:click={reset}>
+                {$_("pixelization.options.reset")}
+            </button>
         </div>
     </div>
 </div>

@@ -12,7 +12,11 @@
         "language": "Language",
         "languages": {
             "en": "English",
+            "fr": "French",
             "de": "German",
+            "ru": "Russian",
+            "es": "Spanish",
+            "sv": "Swedish",
             "tok": "Toki Pona"
         }
     },
@@ -103,7 +107,8 @@
                 "gamma": "Gamma",
                 "sharpness": "Sharpness",
                 "hue": "Hue"
-            }
+            },
+            "reset": "RESET"
         }
     }
 }
