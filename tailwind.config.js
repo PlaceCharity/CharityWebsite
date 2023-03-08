@@ -21,7 +21,7 @@ module.exports = {
     extend: {
       fontFamily: {
         'comingsans': ['Coming Sans', 'Shantell Sans', 'cursive'],
-        'patrickhand': ['Patrick Hand', 'Neucha', 'cursive']
+        'patrickhand': ['Patrick Hand', 'Shantell Sans', 'cursive']
       }
     }
   },

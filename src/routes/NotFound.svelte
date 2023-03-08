@@ -4,10 +4,10 @@
 
 <div class="flex flex-col grow">
     <div class="grow">
-        <h1 class="font-comingsans text-8xl tracking-wide mb-8 text-center">
+        <h1 class="font-comingsans font-extrabold text-8xl tracking-wide mb-8 text-center">
             {$_("notFound.title")}
         </h1>
-        <p class="font-patrickhand text-4xl mb-8 text-center">
+        <p class="font-patrickhand font-normal text-4xl mb-8 text-center">
             {$_("notFound.description")}
         </p>
     </div>

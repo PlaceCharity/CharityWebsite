@@ -39,16 +39,16 @@
 <div class="w-full justify-center items-center flex">
     <div class="w-full md:max-w-[45vw] flex flex-col items-center m-2">
         <div class="tabs w-full flex-grow-0">
-            <button class="tab tab-lifted tab-border-none tab-lg flex-1 font-patrickhand text-xl {tab === 'sample' ? 'tab-active' : ''}" on:click={() => tab = 'sample'}>{$_("pixelization.options.sample.name")}</button>
-            <button class="tab tab-lifted tab-border-none tab-lg flex-1 font-patrickhand text-xl {tab === 'colors' ? 'tab-active' : ''}" on:click={() => tab = 'colors'}>{$_("pixelization.options.colors.name")}</button>
-            <button class="tab tab-lifted tab-border-none tab-lg flex-1 font-patrickhand text-xl {tab === 'process' ? 'tab-active' : ''}" on:click={() => tab = 'process'}>{$_("pixelization.options.process.name")}</button>
+            <button class="tab tab-lifted tab-border-none tab-lg flex-1 font-patrickhand font-normal text-xl {tab === 'sample' ? 'tab-active' : ''}" on:click={() => tab = 'sample'}>{$_("pixelization.options.sample.name")}</button>
+            <button class="tab tab-lifted tab-border-none tab-lg flex-1 font-patrickhand font-normal text-xl {tab === 'colors' ? 'tab-active' : ''}" on:click={() => tab = 'colors'}>{$_("pixelization.options.colors.name")}</button>
+            <button class="tab tab-lifted tab-border-none tab-lg flex-1 font-patrickhand font-normal text-xl {tab === 'process' ? 'tab-active' : ''}" on:click={() => tab = 'process'}>{$_("pixelization.options.process.name")}</button>
         </div>
         <div class="bg-base-100 w-full flex items-center justify-center rounded-xl p-6 shadow-xl {tab === 'sample' ? 'rounded-tl-none' : ''} {tab === 'process' ? 'rounded-tr-none' : ''}">
-            <div class="form-control w-full font-patrickhand">
+            <div class="form-control w-full font-patrickhand font-normal">
                 <div class={tab === 'sample' ? '' : 'hidden'}>
                     <div class="tabs tabs-boxed w-full flex-grow-0 my-2">
-                        <button class="tab flex-1 font-patrickhand text-lg {options.scaleMode === 0 ? 'tab-active' : ''}" on:click={() => {options.scaleMode = 0; updatePixelated()}}>{$_("pixelization.options.sample.absolute.name")}</button> 
-                        <button class="tab flex-1 font-patrickhand text-lg {options.scaleMode === 1 ? 'tab-active' : ''}" on:click={() => {options.scaleMode = 1; updatePixelated()}}>{$_("pixelization.options.sample.relative.name")}</button>
+                        <button class="tab flex-1 font-patrickhand font-normal text-lg {options.scaleMode === 0 ? 'tab-active' : ''}" on:click={() => {options.scaleMode = 0; updatePixelated()}}>{$_("pixelization.options.sample.absolute.name")}</button> 
+                        <button class="tab flex-1 font-patrickhand font-normal text-lg {options.scaleMode === 1 ? 'tab-active' : ''}" on:click={() => {options.scaleMode = 1; updatePixelated()}}>{$_("pixelization.options.sample.relative.name")}</button>
                     </div>
                     <div class="{options.scaleMode === 0 ? '' : 'hidden'}">
                         <label for="width" class="label pt-0">
@@ -79,7 +79,7 @@
                     <label for="distanceMode" class="label pt-0">
                         <span class="label-text text-md">{$_("pixelization.options.colors.colorDistanceAlg.label")}</span>
                     </label>
-                    <select id="distanceMode" bind:value={options.distanceMode} on:change={updatePixelated} class="select select-bordered text-xl w-full">
+                    <select id="distanceMode" bind:value={options.distanceMode} on:change={updatePixelated} class="select select-bordered text-xl w-full font-normal">
                         <option value=0>{$_("pixelization.options.colors.colorDistanceAlg.rgb")}</option>
                         <option value=1>{$_("pixelization.options.colors.colorDistanceAlg.cie76")}</option>
                         <option value=2>{$_("pixelization.options.colors.colorDistanceAlg.cie94")}</option>
@@ -94,7 +94,7 @@
                     <label for="ditherMode" class="label pt-0">
                         <span class="label-text text-md">{$_("pixelization.options.colors.ditherAlg.label")}</span>
                     </label>
-                    <select id="ditherMode" bind:value={options.ditherMode} on:change={updatePixelated} class="select select-bordered text-xl w-full mb-2">
+                    <select id="ditherMode" bind:value={options.ditherMode} on:change={updatePixelated} class="select select-bordered text-xl w-full mb-2 font-normal">
                         <option value=0>{$_("pixelization.options.colors.ditherAlg.none")}</option>
                         <option value=1>{$_("pixelization.options.colors.ditherAlg.bayer8x8")}</option>
                         <option value=2>{$_("pixelization.options.colors.ditherAlg.bayer4x4")}</option>
@@ -155,7 +155,7 @@
             </div>
         </div>
         <div class="flex flex-row w-full justify-end">
-            <button class="btn normal-case font-patrickhand text-xl my-2" on:click={reset}>
+            <button class="btn normal-case font-patrickhand font-normal text-xl my-2" on:click={reset}>
                 {$_("pixelization.options.reset")}
             </button>
         </div>

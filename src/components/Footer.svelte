@@ -8,7 +8,7 @@
         <div class="flex flex-row items-center justify-center w-full">
             <div class="hidden sm:inline-flex flex-1">
                 <Link class="btn btn-ghost" to="/">
-                    <span class="normal-case font-comingsans text-3xl tracking-wider">{$_("app.name")}</span>
+                    <span class="normal-case font-comingsans font-extrabold text-3xl tracking-wider">{$_("app.name")}</span>
                     <img class="h-full" src="assets/images/charity.png" alt="Charity Logo">
                 </Link>
             </div> 

@@ -34,7 +34,7 @@
 
 <div class="my-4 relative w-full items-center" on:drop|preventDefault={dropHandler} on:dragover|preventDefault on:dragenter|preventDefault={dragEnterHandler} on:dragleave|preventDefault={dragLeaveHandler}>
     <label for="file" class="flex flex-col w-full border-2 border-base-content rounded-lg justify-center items-center text-center z-10 {draggedOver === 0 ? 'border-dotted': 'border-solid'}" >
-        <p class="font-patrickhand text-2xl m-4 my-16">{$_("pixelization.image.upload")}</p>
+        <p class="font-patrickhand font-normal text-2xl m-4 my-16">{$_("pixelization.image.upload")}</p>
     </label>
     <input id="file" type="file" class="hidden" accept=".png,.jpg" bind:this={fileInput} bind:files on:change={upload}/>
 </div>

@@ -77,7 +77,7 @@
 </script>
 
 <div id="pixelization" class="flex flex-col items-center justify-center bg-base-200">
-    <h2 class="font-comingsans text-6xl mb-4 text-center">{$_("pixelization.name")}</h2>
+    <h2 class="font-comingsans font-extrabold text-6xl mb-4 text-center">{$_("pixelization.name")}</h2>
     <div class="flex flex-col md:flex-row w-full items-start">
         <Image on:upload={upload}/>
         <Options bind:options={options} on:updatePixelated={updatePixelated}/>

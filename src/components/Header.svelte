@@ -30,9 +30,9 @@
             <label for="localeSelector" class="btn btn-circle absolute top-0 right-0 m-4">
                 <span class="material-icons-round">close</span>
             </label>
-            <p class="font-bold text-2xl">{$_("header.language")}</p>
+            <p class="text-2xl"><b>{$_("header.language")}</b></p>
             <div class="form-control w-full max-w-xs my-4">
-                <select class="select select-bordered text-xl w-full" value={$locale} on:change|preventDefault={handleLocaleChange}>
+                <select class="select select-bordered text-xl w-full font-normal" value={$locale} on:change|preventDefault={handleLocaleChange}>
                   <option value="en">{$_("header.languages.en")}</option>
                   <option value="de">{$_("header.languages.de")}</option>
                   <option value="ru">{$_("header.languages.ru")}</option>
@@ -44,7 +44,7 @@
     </div>
     <div class="flex-1">
         <Link class="btn btn-ghost" to="/">
-            <span class="normal-case font-comingsans text-3xl tracking-wider">{$_("app.name")}</span>
+            <span class="normal-case font-comingsans font-extrabold text-3xl tracking-wider">{$_("app.name")}</span>
             <img class="h-full" src="assets/images/charity.png" alt="Charity Logo">
         </Link>
     </div>

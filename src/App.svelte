@@ -48,7 +48,7 @@
         </div>
     {:else}
         <div class="flex h-screen justify-center items-center">
-            <h1 class="font-comingsans text-6xl sm:text-7xl md:text-8xl lg:text-9xl">Loading...</h1>
+            <h1 class="font-comingsans font-extrabold text-6xl sm:text-7xl md:text-8xl lg:text-9xl">Loading...</h1>
         </div>
     {/if}
 </Router>
