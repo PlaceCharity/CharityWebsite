@@ -25,7 +25,7 @@
                 </button>
             </div>
         </div>
-        <h1 class="font-comingsans font-extrabold text-8xl tracking-wide mb-8 text-center">{$_('app.name')}</h1>
+        <h1 class="font-comingsans font-extrabold text-8xl tracking-wide my-8 text-center">{$_('app.name')}</h1>
         <p class="font-patrickhand font-normal text-4xl mb-8 text-center">{$_("home.description")}</p>
         <div class="flex flex-col sm:flex-row items-center">
             <a href="#pixelization" class="btn btn-outline font-patrickhand font-normal normal-case text-xl m-2" on:click={handleAnchorClick}>{$_("home.createTemplate")}</a>

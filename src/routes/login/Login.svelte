@@ -16,7 +16,7 @@
 </script>
 <div class="flex flex-col grow justify-center align-middle items-center">
     <div class="flex flex-col grow md:flex-row items-center">
-        <div class="card md:min-w-96 bg-neutral text-neutral-content mx-4">
+        <div class="card md:min-w-96 bg-neutral text-neutral-content m-4">
             <div class="card-body items-center text-center">
                 {#if auth === null || auth.pxls === null || auth === undefined || auth.pxls === undefined}
                     <h2 class="card-title text-3xl font-patrickhand font-normal">{$_("login.pxls.card.title")}</h2>

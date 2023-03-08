@@ -60,7 +60,7 @@
             <button class="btn btn-ghost">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
             </button>
-            <ul class="menu bg-base-300 p-2 rounded-box right-0">
+            <ul class="menu bg-base-300 p-2 rounded-box right-0 z-10">
                 <li>
                     <label class="btn btn-ghost swap swap-rotate">
                         <input type="checkbox" checked={checked} on:change={changeTheme}/>
