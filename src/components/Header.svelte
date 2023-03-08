@@ -9,7 +9,7 @@
     let checked = $theme === 'light';
 
     function changeTheme() {
-        if ($theme === 'dark') {
+        if ($theme === 'dark' || $theme === null || $theme === undefined) {
             theme.set('light');
         } else {
             theme.set('dark');
