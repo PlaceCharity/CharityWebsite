@@ -45,14 +45,14 @@
         saturation: 100,
         gamma: 100,
         sharpen: 0,
-        hue: 0
+        hue: 0,
+        palette: "0"
     }
 
     function updatePixelated() {
-        console.log(options.hue);
         const p = api.create_buffer(bitmap.width, bitmap.height);
         Module.HEAP8.set(bitmap.data, p);
-        api.process(p, bitmap.width, bitmap.height, options.scaleMode, options.width, options.height, options.scaleX, options.scaleY, parseInt(options.distanceMode), parseInt(options.ditherMode), options.dither, options.alphaThreshold, options.brightness, options.contrast, options.saturation, options.gamma, options.sharpen, options.hue);
+        api.process(p, bitmap.width, bitmap.height, options.scaleMode, options.width, options.height, options.scaleX, options.scaleY, parseInt(options.distanceMode), parseInt(options.ditherMode), options.dither, options.alphaThreshold, options.brightness, options.contrast, options.saturation, options.gamma, options.sharpen, options.hue, parseInt(options.palette));
         const resultPointer = api.get_result_pointer();
         const resultSize = api.get_result_size();
         const resultView = new Uint8Array(Module.HEAP8.buffer, resultPointer, resultSize);

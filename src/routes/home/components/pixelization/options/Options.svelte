@@ -26,7 +26,8 @@
             saturation: 100,
             gamma: 100,
             sharpen: 0,
-            hue: 0
+            hue: 0,
+            palette: "0"
         }
         updatePixelated();
     }
@@ -46,6 +47,16 @@
         <div class="bg-base-100 w-full flex items-center justify-center rounded-xl p-6 shadow-xl {tab === 'sample' ? 'rounded-tl-none' : ''} {tab === 'process' ? 'rounded-tr-none' : ''}">
             <div class="form-control w-full font-patrickhand font-normal">
                 <div class={tab === 'sample' ? '' : 'hidden'}>
+                    <label for="palette" class="label pt-0">
+                        <span class="label-text text-md">{$_("pixelization.options.sample.palette.label")}</span>
+                    </label>
+                    <select id="palette" bind:value={options.palette} on:change={updatePixelated} class="select select-bordered text-xl w-full font-normal">
+                        <option value=0>{$_("pixelization.options.sample.palette.pxls")}</option>
+                        <option value=1>{$_("pixelization.options.sample.palette.rplace1")}</option>
+                        <option value=2>{$_("pixelization.options.sample.palette.rplace2")}</option>
+                        <option value=3>{$_("pixelization.options.sample.palette.rplace3")}</option>
+                    </select>
+                    <div class="divider"/>
                     <div class="tabs tabs-boxed w-full flex-grow-0 my-2">
                         <button class="tab flex-1 font-patrickhand font-normal text-lg {options.scaleMode === 0 ? 'tab-active' : ''}" on:click={() => {options.scaleMode = 0; updatePixelated()}}>{$_("pixelization.options.sample.absolute.name")}</button> 
                         <button class="tab flex-1 font-patrickhand font-normal text-lg {options.scaleMode === 1 ? 'tab-active' : ''}" on:click={() => {options.scaleMode = 1; updatePixelated()}}>{$_("pixelization.options.sample.relative.name")}</button>

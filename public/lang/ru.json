@@ -59,7 +59,14 @@
         },
         "options": {
             "sample": {
-                "name": "ОБРАЗЕЦ",
+                "name": "НАСТРОЙКА",
+                "palette": {
+                    "label": "Palette",
+                    "pxls": "Pxls",
+                    "rplace1": "r/place '22 (Day 1)",
+                    "rplace2": "r/place '22 (Day 2)",
+                    "rplace3": "r/place '22 (Day 3)"
+                },
                 "absolute": {
                     "name": "АБСОЛЮТНАЯ",
                     "width": "Ширина",

@@ -60,6 +60,13 @@
         "options": {
             "sample": {
                 "name": "suli",
+                "palette": {
+                    "label": "kulupu kule",
+                    "pxls": "kulupu kule pi sitelen Pxls",
+                    "rplace1": "kulupu kule pi sitelen r/place (suno nanpa wan)",
+                    "rplace2": "kulupu kule pi sitelen r/place (suno nanpa tu)",
+                    "rplace3": "kulupu kule pi sitelen r/place (suno nanpa tu wan)"
+                },
                 "absolute": {
                     "name": "nanpa leko",
                     "width": "nanpa poka",
