@@ -1,7 +1,12 @@
 <script>
-   import { onMount } from 'svelte';
+   import { onMount, beforeUpdate } from 'svelte';
 
     onMount(getCanvas);
+    beforeUpdate(() => {
+        if (image !== undefined && image !== null && subTemplate !== undefined && subTemplate !== null) {
+            image.style.transform = `translate(${canvasProperties.translateX + subTemplate.x * canvasProperties.zoom}px, ${canvasProperties.translateY + subTemplate.y * canvasProperties.zoom}px)`;
+        }
+    });
 
     let canvas;
     let canvasContainer;
