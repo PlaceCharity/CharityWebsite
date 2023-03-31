@@ -19,7 +19,7 @@
     };
 
     async function getCanvas() {
-        const response = await fetch('https://charity.pxls.space/api/place', {
+        const response = await fetch('http://localhost:1677/api/place', {
             method: 'GET'
         });
         const blob = await response.blob();
@@ -61,7 +61,6 @@
             if (subTemplate.y > canvasProperties.height - 1) subTemplate.y = canvasProperties.height - 1;
             image.style.transform = `translate(${canvasProperties.translateX + subTemplate.x * canvasProperties.zoom}px, ${canvasProperties.translateY + subTemplate.y * canvasProperties.zoom}px)`;
         }
-        // https://pride.place/template.png
     }
 
     function zoomCanvas(e) {
@@ -104,6 +103,20 @@
                 imageProperties.width = img.width;
                 imageProperties.height = img.height;
                 ctx.drawImage(img, 0, 0);
+                const imageData = ctx.getImageData(0, 0, image.width, image.height);
+                const rv = new ImageData(image.width, image.height);
+                for (let i = 0; i < image.width; i++) {
+                    for (let j = 0; j < image.height; j++) {
+                        let imageIndex = (j * image.width + i) * 4;
+                        let alpha = imageData.data[imageIndex + 3];
+
+                        rv.data[imageIndex] = imageData.data[imageIndex];
+                        rv.data[imageIndex + 1] = imageData.data[imageIndex + 1];
+                        rv.data[imageIndex + 2] = imageData.data[imageIndex + 2];
+                        rv.data[imageIndex + 3] = alpha > 2 ? 255 : 0;
+                    }
+                }
+                ctx.putImageData(rv, 0, 0);
             }
             image.style.transform = `translate(${canvasProperties.translateX + subTemplate.x * canvasProperties.zoom}px, ${canvasProperties.translateY + subTemplate.y * canvasProperties.zoom}px)`;
         }
