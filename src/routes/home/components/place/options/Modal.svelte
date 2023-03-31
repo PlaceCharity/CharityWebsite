@@ -24,7 +24,7 @@
     };
 
     async function getCanvas() {
-        const response = await fetch('http://localhost:1677/api/place', {
+        const response = await fetch('https://charity.pxls.space/api/place', {
             method: 'GET'
         });
         const blob = await response.blob();
