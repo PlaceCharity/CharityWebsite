@@ -3,6 +3,7 @@
 </svelte:head>
 
 <script>
+    import { _ } from '../../../../../services/i18n';
     import { onMount, beforeUpdate } from 'svelte';
 
     beforeUpdate(updateCode);
@@ -67,7 +68,7 @@
                 }
                 template = template;
             }
-        } catch(_) {
+        } catch(e) {
             return;
         }
     }
@@ -85,7 +86,7 @@
                 }
                 template = template;
             }
-        } catch(_) {
+        } catch(e) {
             return;
         }
     }
@@ -102,14 +103,14 @@
         <div class="bg-base-100 w-full flex items-center justify-center rounded-xl p-6 shadow-xl m-4">
             <div class="form-control w-full font-patrickhand font-normal">
                 <label for="contact" class="label">
-                    <span class="label-text">Contact Information</span>
+                    <span class="label-text">{$_("place.createTemplate.contact.label")}</span>
                 </label>
-                <input type="text" placeholder="Type here..." class="input input-bordered w-full mb-2" bind:value={template.contact}/>
+                <input type="text" placeholder={$_("place.createTemplate.contact.placeholder")} class="input input-bordered w-full mb-2" bind:value={template.contact}/>
                 <div class="divider" />
                 <div class="collapse collapse-arrow bg-base-200 rounded-md mb-2">
                     <input type="checkbox" checked />
                     <div class="collapse-title text-xl font-medium">
-                      Templates
+                        {$_("place.createTemplate.templates.label")}
                     </div>
                     <div class="collapse-content">
                         <div class="w-full">
@@ -117,13 +118,13 @@
                                 <button class="btn btn-outline w-full mb-2" on:click={editTemplate(subTemp)}>{subTemp.name}</button>
                             {/each}
                         </div>
-                        <button class="btn" on:click={createTemplate}>Add Template</button>
+                        <button class="btn" on:click={createTemplate}>{$_("place.createTemplate.templates.addTemplate")}</button>
                     </div>
                 </div>
                 <div class="collapse collapse-arrow bg-base-200 rounded-md mb-2">
                     <input type="checkbox" />
                     <div class="collapse-title text-xl font-medium">
-                      Whitelist
+                        {$_("place.createTemplate.whitelist.label")}
                     </div>
                     <div class="collapse-content">
                         <div class="w-full">
@@ -132,14 +133,14 @@
                             {/each}
                         </div>
                         <div class="{template.whitelist.length  > 0 ? 'divider' : 'hidden'}" />
-                        <input type="text" placeholder="Type here..." class="input input-bordered w-full mb-2" bind:value={whitelistAdd}/>
-                        <button class="btn" on:click={whitelistTemplate}>Whitelist Template</button>
+                        <input type="text" placeholder={$_("place.createTemplate.whitelist.placeholder")} class="input input-bordered w-full mb-2" bind:value={whitelistAdd}/>
+                        <button class="btn" on:click={whitelistTemplate}>{$_("place.createTemplate.whitelist.button")}</button>
                     </div>
                 </div>
                 <div class="collapse collapse-arrow bg-base-200 rounded-md mb-2">
                     <input type="checkbox" />
                     <div class="collapse-title text-xl font-medium">
-                      Blacklist
+                        {$_("place.createTemplate.blacklist.label")}
                     </div>
                     <div class="collapse-content">
                         <div class="w-full">
@@ -148,8 +149,8 @@
                             {/each}
                         </div>
                         <div class="{template.blacklist.length  > 0 ? 'divider' : 'hidden'}" />
-                        <input type="text" placeholder="Type here..." class="input input-bordered w-full mb-2" bind:value={blacklistAdd}/>
-                        <button class="btn" on:click={whitelistTemplate}>Blacklist Template</button>
+                        <input type="text" placeholder={$_("place.createTemplate.blacklist.placeholder")} class="input input-bordered w-full mb-2" bind:value={blacklistAdd}/>
+                        <button class="btn" on:click={whitelistTemplate}>{$_("place.createTemplate.blacklist.button")}</button>
                     </div>
                 </div>
             </div>

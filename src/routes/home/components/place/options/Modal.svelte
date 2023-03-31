@@ -1,5 +1,6 @@
 <script>
-   import { onMount, beforeUpdate } from 'svelte';
+    import { _ } from '../../../../../services/i18n';
+    import { onMount, beforeUpdate } from 'svelte';
 
     onMount(getCanvas);
     beforeUpdate(() => {
@@ -144,52 +145,52 @@
     <div class="bg-base-100 w-1/2 z-30 p-4">
         {#if subTemplate !== null && subTemplate !== undefined}
             <label for="templateName" class="label">
-                <span class="label-text">Template Name</span>
+                <span class="label-text">{$_("place.createTemplate.modal.templateName.label")}</span>
             </label>
-            <input type="text" placeholder="Type here..." class="input input-bordered w-full mb-2" bind:value={subTemplate.name}/>
+            <input type="text" placeholder={$_("place.createTemplate.modal.templateName.placeholder")} class="input input-bordered w-full mb-2" bind:value={subTemplate.name}/>
             <div class="collapse collapse-arrow bg-base-200 rounded-md mb-2">
                 <input type="checkbox" checked />
                 <div class="collapse-title text-xl font-medium">
-                    Template Sources
+                    {$_("place.createTemplate.modal.templateSources.label")}
                 </div>
                 <div class="collapse-content">
                     {#each subTemplate.sources as source}
                     <div class="flex">
                         <div class="w-full mr-2">
                             <label for="templateSources" class="label">
-                                <span class="label-text">Template Image URL</span>
+                                <span class="label-text">{$_("place.createTemplate.modal.templateSources.url.label")}</span>
                             </label>
-                            <input type="text" placeholder="Type here..." class="input input-bordered w-full mb-2" bind:value={source}/>
+                            <input type="text" placeholder={$_("place.createTemplate.modal.templateSources.url.placeholder")} class="input input-bordered w-full mb-2" bind:value={source}/>
                         </div>
                         <div>
                             <label for="templateSources" class="label">
                                 <span class="label-text">&nbsp;</span>
                             </label>
-                            <button class="btn" on:click={loadURL(source)}>Load</button>
+                            <button class="btn" on:click={loadURL(source)}>{$_("place.createTemplate.modal.templateSources.url.load")}</button>
                         </div>
                     </div>
                     {/each}
-                    <button class="btn" on:click={() => {subTemplate.sources.push(""); subTemplate = subTemplate}}>Add Source</button>
-                    <button class="btn {subTemplate && subTemplate.sources.filter(s => s !== "").length > 0 ? '' : 'btn-disabled'}" on:click={() => {subTemplate.sources.pop(); subTemplate = subTemplate}}>Remove Source</button>
+                    <button class="btn" on:click={() => {subTemplate.sources.push(""); subTemplate = subTemplate}}>{$_("place.createTemplate.modal.templateSources.add")}</button>
+                    <button class="btn {subTemplate && subTemplate.sources.length > 0 ? '' : 'btn-disabled'}" on:click={() => {subTemplate.sources.pop(); subTemplate = subTemplate}}>{$_("place.createTemplate.modal.templateSources.remove")}</button>
                 </div>
             </div>
             <div class="flex flex-row">
                 <div class="mr-2 w-full">
                     <label for="templateSources" class="label flex">
-                        <span class="label-text">X</span>
+                        <span class="label-text">{$_("place.createTemplate.modal.x.label")}</span>
                     </label>
                     <input type="number" placeholder="" class="input input-bordered w-full mb-2" bind:value={subTemplate.x}/>
                 </div>
                 <div class="w-full">
                     <label for="templateSources" class="label">
-                        <span class="label-text">Y</span>
+                        <span class="label-text">{$_("place.createTemplate.modal.y.label")}</span>
                     </label>
                     <input type="number" placeholder="" class="input input-bordered w-full mb-2" bind:value={subTemplate.y}/>
                 </div>
             </div>
         {/if}
-        <button class="btn btn-error" on:click={() => {template.templates = template.templates.filter(temp => temp !== subTemplate); closeModal()}}>Remove</button>
-        <button class="btn {subTemplate && subTemplate.name && subTemplate.name !== '' && subTemplate.sources.filter(s => s !== "").length > 0 ? '' : 'btn-disabled'}" on:click={closeModal}>Done</button>
+        <button class="btn btn-error" on:click={() => {template.templates = template.templates.filter(temp => temp !== subTemplate); closeModal()}}>{$_("place.createTemplate.modal.remove")}</button>
+        <button class="btn {subTemplate && subTemplate.name && subTemplate.name !== '' && subTemplate.sources.filter(s => s !== "").length > 0 ? '' : 'btn-disabled'}" on:click={closeModal}>{$_("place.createTemplate.modal.done")}</button>
     </div>
     <div bind:this={canvasContainer} class="bg-base-200 w-1/2" on:mousemove|preventDefault={translateCanvas} on:wheel|preventDefault={zoomCanvas} on:contextmenu|preventDefault on:mousedown|preventDefault>
         <div class="absolute w-max">
