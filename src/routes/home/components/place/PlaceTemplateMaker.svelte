@@ -5,7 +5,9 @@
 
     let template = {
         contact: "",
-        templates: []
+        templates: [],
+        whitelist: [],
+        blacklist: []
     }
     let modalOpen = false;
     let subTemplate;

@@ -48,9 +48,46 @@
         template = template;
     }
 
-    function removeTemplate() {
-        template.templates.pop();
-        template = template;
+    function findJSONTemplateInParams(urlString) {
+        const urlSearchParams = new URLSearchParams(urlString);
+        const params = Object.fromEntries(urlSearchParams.entries());
+        return params.jsontemplate ? params.jsontemplate : null;
+    }
+
+    let whitelistAdd = "";
+
+    function whitelistTemplate() {
+        try {
+            const url = new URL(whitelistAdd);
+            if (url.protocol === "http:" || url.protocol === "https:") {
+                if (url.hash.substring(1).includes("jsontemplate") || url.search.substring(1).includes("jsontemplate")) {
+                    template.whitelist.push(findJSONTemplateInParams(url.hash.substring(1)) || findJSONTemplateInParams(url.search.substring(1)));
+                } else {
+                    template.whitelist.push(whitelistAdd);
+                }
+                template = template;
+            }
+        } catch(_) {
+            return;
+        }
+    }
+
+    let blacklistAdd = "";
+
+    function blacklistTemplate() {
+        try {
+            const url = new URL(blacklistAdd);
+            if (url.protocol === "http:" || url.protocol === "https:") {
+                if (url.hash.substring(1).includes("jsontemplate") || url.search.substring(1).includes("jsontemplate")) {
+                    template.blacklist.push(findJSONTemplateInParams(url.hash.substring(1)) || findJSONTemplateInParams(url.search.substring(1)));
+                } else {
+                    template.blacklist.push(blacklistAdd);
+                }
+                template = template;
+            }
+        } catch(_) {
+            return;
+        }
     }
 
     export let template;
@@ -68,6 +105,7 @@
                     <span class="label-text">Contact Information</span>
                 </label>
                 <input type="text" placeholder="Type here..." class="input input-bordered w-full mb-2" bind:value={template.contact}/>
+                <div class="divider" />
                 <div class="collapse collapse-arrow bg-base-200 rounded-md mb-2">
                     <input type="checkbox" checked />
                     <div class="collapse-title text-xl font-medium">
@@ -80,11 +118,40 @@
                             {/each}
                         </div>
                         <button class="btn" on:click={createTemplate}>Add Template</button>
-                        <button class="btn {template.templates.length > 0 ? '' : 'btn-disabled'}" on:click={removeTemplate}>Remove Template</button>
                     </div>
                 </div>
-                
-                
+                <div class="collapse collapse-arrow bg-base-200 rounded-md mb-2">
+                    <input type="checkbox" />
+                    <div class="collapse-title text-xl font-medium">
+                      Whitelist
+                    </div>
+                    <div class="collapse-content">
+                        <div class="w-full">
+                            {#each template.whitelist as whitelisted}
+                                <button class="btn btn-error w-full mb-2" on:click={() => {template.whitelist = template.whitelist.filter(wl => wl !== whitelisted)}}>{whitelisted}</button>
+                            {/each}
+                        </div>
+                        <div class="{template.whitelist.length  > 0 ? 'divider' : 'hidden'}" />
+                        <input type="text" placeholder="Type here..." class="input input-bordered w-full mb-2" bind:value={whitelistAdd}/>
+                        <button class="btn" on:click={whitelistTemplate}>Whitelist Template</button>
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow bg-base-200 rounded-md mb-2">
+                    <input type="checkbox" />
+                    <div class="collapse-title text-xl font-medium">
+                      Blacklist
+                    </div>
+                    <div class="collapse-content">
+                        <div class="w-full">
+                            {#each template.blacklist as blacklisted}
+                                <button class="btn btn-error w-full mb-2" on:click={() => {template.blacklist = template.blacklist.filter(wl => wl !== blacklisted)}}>{blacklisted}</button>
+                            {/each}
+                        </div>
+                        <div class="{template.blacklist.length  > 0 ? 'divider' : 'hidden'}" />
+                        <input type="text" placeholder="Type here..." class="input input-bordered w-full mb-2" bind:value={blacklistAdd}/>
+                        <button class="btn" on:click={whitelistTemplate}>Blacklist Template</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

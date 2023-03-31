@@ -41,7 +41,7 @@
     }
 
     function translateCanvas(e) {
-        if ((e.target.id !== 'template' && e.buttons === 1) || e.buttons === 2) {
+        if ((e.target.id !== 'template' && e.buttons === 1) || e.buttons > 1) {
             canvasProperties.translateX = canvasProperties.translateX + e.movementX;
             canvasProperties.translateY = canvasProperties.translateY + e.movementY;
             if (canvasProperties.translateX > 100) canvasProperties.translateX = 100;
@@ -49,7 +49,7 @@
             if (canvasProperties.translateX < -(canvasProperties.width * canvasProperties.zoom - canvasContainer.clientWidth) - 100) canvasProperties.translateX = -(canvasProperties.width * canvasProperties.zoom - canvasContainer.clientWidth) - 100;
             if (canvasProperties.translateY < -(canvasProperties.height * canvasProperties.zoom - canvasContainer.clientHeight) - 100) canvasProperties.translateY = -(canvasProperties.height * canvasProperties.zoom - canvasContainer.clientHeight) - 100;
             canvas.style.transform = `translate(${canvasProperties.translateX}px, ${canvasProperties.translateY}px)`;
-            image.style.transform = `translate(${canvasProperties.translateX + subTemplate.x * canvasProperties.zoom}px, ${canvasProperties.translateY + subTemplate.y * canvasProperties.zoom}px)`;
+            if (image !== undefined && image !== null && subTemplate !== undefined && subTemplate !== null) image.style.transform = `translate(${canvasProperties.translateX + subTemplate.x * canvasProperties.zoom}px, ${canvasProperties.translateY + subTemplate.y * canvasProperties.zoom}px)`;
         }
         if (e.target.id === 'template' && e.buttons === 1) {
             const x = Math.floor((-canvasProperties.translateX + e.layerX) / canvasProperties.zoom);
@@ -64,7 +64,7 @@
             if (subTemplate.y < 0) subTemplate.y = 0;
             if (subTemplate.x > canvasProperties.width - 1) subTemplate.x = canvasProperties.width - 1;
             if (subTemplate.y > canvasProperties.height - 1) subTemplate.y = canvasProperties.height - 1;
-            image.style.transform = `translate(${canvasProperties.translateX + subTemplate.x * canvasProperties.zoom}px, ${canvasProperties.translateY + subTemplate.y * canvasProperties.zoom}px)`;
+            if (image !== undefined && image !== null && subTemplate !== undefined && subTemplate !== null) image.style.transform = `translate(${canvasProperties.translateX + subTemplate.x * canvasProperties.zoom}px, ${canvasProperties.translateY + subTemplate.y * canvasProperties.zoom}px)`;
         }
     }
 
@@ -188,10 +188,10 @@
                 </div>
             </div>
         {/if}
-        <button class="btn" on:click={() => {template.templates.pop(); closeModal()}}>Cancel</button>
+        <button class="btn btn-error" on:click={() => {template.templates = template.templates.filter(temp => temp !== subTemplate); closeModal()}}>Remove</button>
         <button class="btn {subTemplate && subTemplate.name && subTemplate.name !== '' && subTemplate.sources.filter(s => s !== "").length > 0 ? '' : 'btn-disabled'}" on:click={closeModal}>Done</button>
     </div>
-    <div bind:this={canvasContainer} class="bg-base-200 w-1/2" on:mousemove|preventDefault={translateCanvas} on:wheel|preventDefault={zoomCanvas} on:contextmenu|preventDefault>
+    <div bind:this={canvasContainer} class="bg-base-200 w-1/2" on:mousemove|preventDefault={translateCanvas} on:wheel|preventDefault={zoomCanvas} on:contextmenu|preventDefault on:mousedown|preventDefault>
         <div class="absolute w-max">
             <canvas class="[image-rendering:pixelated]" bind:this={canvas}/>
         </div>
