@@ -19,7 +19,7 @@
     };
 
     async function getCanvas() {
-        const response = await fetch('https://i.imgur.com/BWVZMll.png', {
+        const response = await fetch('https://charity.pxls.space/api/place', {
             method: 'GET'
         });
         const blob = await response.blob();
