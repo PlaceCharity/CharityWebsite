@@ -46,8 +46,14 @@
     "home": {
         "beta": "Charity is in Beta! Some features may not be complete!",
         "description": "Pxls Templates, Information, and Utilities",
+        "description.place": "Now supporting r/place!",
         "createTemplate": "Create a Template",
         "addDiscordBot": "Add our Discord Bot"
+    },
+    "place": {
+        "createTemplate": {
+            "name": "Create an r/place Template!"
+        }
     },
     "pixelization": {
         "name": "Pixelization",
