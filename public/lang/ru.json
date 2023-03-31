@@ -46,8 +46,56 @@
     "home": {
         "beta": "Чарити находится в бета-версии! Некоторые функции могут быть не завершены!",
         "description": "Шаблоны Pxls, информация и утилиты",
+        "description.place": "Now supporting r/place!",
         "createTemplate": "Создать шаблон",
         "addDiscordBot": "Добавить нашего Discord-бота"
+    },
+    "place": {
+        "createTemplate": {
+            "name": "Create an r/place Template!",
+            "contact": {
+                "label": "Contact Information",
+                "placeholder": "Type here..."
+            },
+            "templates": {
+                "label": "Templates",
+                "addTemplate": "Add Template"
+            },
+            "modal": {
+                "templateName": {
+                    "label": "Template Name",
+                    "placeholder": "Type here..."
+                },
+                "templateSources": {
+                    "label": "Template Sources",
+                    "url": {
+                        "label": "Template Image URL",
+                        "placeholder": "Type here...",
+                        "load": "Load"
+                    },
+                    "add": "Add Source",
+                    "remove": "Remove Source"
+                },
+                "x": {
+                    "label": "X"
+                },
+                "y": {
+                    "label": "Y"
+                },
+                "remove": "Remove",
+                "done": "Done"
+            },
+            "whitelist": {
+                "label": "Whitelist",
+                "placeholder": "Type here...",
+                "button": "Whitelist"
+            },
+            "blacklist": {
+                "label": "Blacklist",
+                "placeholder": "Type here...",
+                "button": "Blacklist"
+            }
+        }
     },
     "pixelization": {
         "name": "Пикселизация",
@@ -61,11 +109,11 @@
             "sample": {
                 "name": "НАСТРОЙКА",
                 "palette": {
-                    "label": "Palette",
+                    "label": "Палитра",
                     "pxls": "Pxls",
-                    "rplace1": "r/place '22 (Day 1)",
-                    "rplace2": "r/place '22 (Day 2)",
-                    "rplace3": "r/place '22 (Day 3)"
+                    "rplace1": "r/place '22 (День 1)",
+                    "rplace2": "r/place '22 (День 2)",
+                    "rplace3": "r/place '22 (День 3)"
                 },
                 "absolute": {
                     "name": "АБСОЛЮТНАЯ",

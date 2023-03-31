@@ -46,8 +46,56 @@
     "home": {
         "beta": "Charity is in Beta! Some features may not be complete!",
         "description": "Pxls Templates, Information, and Utilities",
+        "description.place": "Now supporting r/place!",
         "createTemplate": "Create a Template",
         "addDiscordBot": "Add our Discord Bot"
+    },
+    "place": {
+        "createTemplate": {
+            "name": "Create an r/place Template!",
+            "contact": {
+                "label": "Contact Information",
+                "placeholder": "Type here..."
+            },
+            "templates": {
+                "label": "Templates",
+                "addTemplate": "Add Template"
+            },
+            "modal": {
+                "templateName": {
+                    "label": "Template Name",
+                    "placeholder": "Type here..."
+                },
+                "templateSources": {
+                    "label": "Template Sources",
+                    "url": {
+                        "label": "Template Image URL",
+                        "placeholder": "Type here...",
+                        "load": "Load"
+                    },
+                    "add": "Add Source",
+                    "remove": "Remove Source"
+                },
+                "x": {
+                    "label": "X"
+                },
+                "y": {
+                    "label": "Y"
+                },
+                "remove": "Remove",
+                "done": "Done"
+            },
+            "whitelist": {
+                "label": "Whitelist",
+                "placeholder": "Type here...",
+                "button": "Whitelist"
+            },
+            "blacklist": {
+                "label": "Blacklist",
+                "placeholder": "Type here...",
+                "button": "Blacklist"
+            }
+        }
     },
     "pixelization": {
         "name": "Pixelization",

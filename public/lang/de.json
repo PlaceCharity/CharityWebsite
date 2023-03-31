@@ -1,6 +1,6 @@
 {
     "app": {
-        "name": "Charity"
+        "name": "Wohltätigkeit "
     },
     "notFound": {
         "title": "404",
@@ -12,16 +12,16 @@
         "language": "Sprache",
         "languages": {
             "en": "Englisch",
-            "fr": "French",
+            "fr": "Französisch",
             "de": "Deutsch",
-            "ru": "Russian",
-            "es": "Spanish",
-            "sv": "Swedish",
+            "ru": "Russisch",
+            "es": "Spanisch",
+            "sv": "Schwedisch",
             "tok": "Toki Pona"
         }
     },
     "footer": {
-        "thirdParty": "Charity ist eine Website von Drittanbietern und nicht direkt mit Pxls verbunden.",
+        "thirdParty": "Charity ist eine Website von Drittanbietern. Diese steht nicht mit Pxls in Verbindung.",
         "createdBy": "Erstellt von {name}"
     },
     "login": {
@@ -32,7 +32,7 @@
         },
         "discord": {
             "label": "Pxls mit Discord verknüpfen",
-            "card.title": "In Pxls angemeldet als {username}.",
+            "card.title": "Angemeldet als {username}.",
             "card.description": "{username} mit Discord verknüpfen...",
             "card.button": "Mit Discord anmelden"
         },
@@ -40,21 +40,69 @@
             "label": "Fertig!",
             "card.title": "Sie sind bereits Angemeldet!",
             "card.description": "Angemeldet als {username}.",
-            "card.button": "Nicht Sie?"
+            "card.button": "Nicht Du?"
         }
     },
     "home": {
         "beta": "Charity ist in der Beta! Einige Funktionen sind möglicherweise nicht vollständig!",
-        "description": "Pxls Templates, Informationen, und Hilfsmittel",
-        "createTemplate": "Erstelle ein Template",
-        "addDiscordBot": "Unseren Discord-Bot einladen"
+        "description": "Pxls Vorlagen, Informationen, und Hilfsmittel",
+        "description.place": "Now supporting r/place!",
+        "createTemplate": "Erstelle eine Vorlage",
+        "addDiscordBot": "Füge unseren Discord Bot hinzu"
+    },
+    "place": {
+        "createTemplate": {
+            "name": "Create an r/place Template!",
+            "contact": {
+                "label": "Contact Information",
+                "placeholder": "Type here..."
+            },
+            "templates": {
+                "label": "Templates",
+                "addTemplate": "Add Template"
+            },
+            "modal": {
+                "templateName": {
+                    "label": "Template Name",
+                    "placeholder": "Type here..."
+                },
+                "templateSources": {
+                    "label": "Template Sources",
+                    "url": {
+                        "label": "Template Image URL",
+                        "placeholder": "Type here...",
+                        "load": "Load"
+                    },
+                    "add": "Add Source",
+                    "remove": "Remove Source"
+                },
+                "x": {
+                    "label": "X"
+                },
+                "y": {
+                    "label": "Y"
+                },
+                "remove": "Remove",
+                "done": "Done"
+            },
+            "whitelist": {
+                "label": "Whitelist",
+                "placeholder": "Type here...",
+                "button": "Whitelist"
+            },
+            "blacklist": {
+                "label": "Blacklist",
+                "placeholder": "Type here...",
+                "button": "Blacklist"
+            }
+        }
     },
     "pixelization": {
         "name": "Verpixelung",
         "image": {
             "original": "ORIGINAL",
-            "pixelated": "PIXELATED",
-            "upload": "Bild hier ablegen oder zum Hochladen anklicken",
+            "pixelated": "Verpixelt",
+            "upload": "Bild in dieses Fenster ziehen oder anklicken um es hochzuladen",
             "download": "Herunterladen"
         },
         "options": {
@@ -63,9 +111,9 @@
                 "palette": {
                     "label": "Palette",
                     "pxls": "Pxls",
-                    "rplace1": "r/place '22 (Day 1)",
-                    "rplace2": "r/place '22 (Day 2)",
-                    "rplace3": "r/place '22 (Day 3)"
+                    "rplace1": "r/place '22 (Tag 1)",
+                    "rplace2": "r/place '22 (Tag 2)",
+                    "rplace3": "r/place '22(Tag 4)"
                 },
                 "absolute": {
                     "name": "ABSOLUT",
@@ -82,7 +130,7 @@
                 "name": "FARBEN",
                 "colorDistanceAlg": {
                     "label": "Farbabstandsalgorithmus",
-                    "rgb": "RGB (PxlsFiddle \"Fast\")",
+                    "rgb": "RGB (PxlsFiddle \"Schnell\")",
                     "cie76": "CIE76",
                     "cie94": "CIE94",
                     "ciede2000": "CIEDE2000 (PxlsFiddle \"Accurate\")",
@@ -115,7 +163,7 @@
                 "sharpness": "Schärfe",
                 "hue": "Farbton"
             },
-            "reset": "RESET"
+            "reset": "ZURÜCKSETZEN"
         }
     }
 }

@@ -64,7 +64,7 @@
             "modal": {
                 "templateName": {
                     "label": "Template Name",
-                    "placeholder":"Type here..."
+                    "placeholder": "Type here..."
                 },
                 "templateSources": {
                     "label": "Template Sources",

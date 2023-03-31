@@ -46,8 +46,56 @@
     "home": {
         "beta": "Charity är i Beta! Vissa funktioner kan vara icke kompletta!",
         "description": "Pxls Mallar, Information, och Verktyg",
+        "description.place": "Now supporting r/place!",
         "createTemplate": "Skapa en Mall",
         "addDiscordBot": "Lägg till vår Discord bot"
+    },
+    "place": {
+        "createTemplate": {
+            "name": "Create an r/place Template!",
+            "contact": {
+                "label": "Contact Information",
+                "placeholder": "Type here..."
+            },
+            "templates": {
+                "label": "Templates",
+                "addTemplate": "Add Template"
+            },
+            "modal": {
+                "templateName": {
+                    "label": "Template Name",
+                    "placeholder": "Type here..."
+                },
+                "templateSources": {
+                    "label": "Template Sources",
+                    "url": {
+                        "label": "Template Image URL",
+                        "placeholder": "Type here...",
+                        "load": "Load"
+                    },
+                    "add": "Add Source",
+                    "remove": "Remove Source"
+                },
+                "x": {
+                    "label": "X"
+                },
+                "y": {
+                    "label": "Y"
+                },
+                "remove": "Remove",
+                "done": "Done"
+            },
+            "whitelist": {
+                "label": "Whitelist",
+                "placeholder": "Type here...",
+                "button": "Whitelist"
+            },
+            "blacklist": {
+                "label": "Blacklist",
+                "placeholder": "Type here...",
+                "button": "Blacklist"
+            }
+        }
     },
     "pixelization": {
         "name": "Pixelisering",
@@ -63,9 +111,9 @@
                 "palette": {
                     "label": "Palette",
                     "pxls": "Pxls",
-                    "rplace1": "r/place '22 (Day 1)",
-                    "rplace2": "r/place '22 (Day 2)",
-                    "rplace3": "r/place '22 (Day 3)"
+                    "rplace1": "r/place '22 (Dag 1)",
+                    "rplace2": "r/place '22 (Dag 2)",
+                    "rplace3": "r/place '22 (Dag 3)"
                 },
                 "absolute": {
                     "name": "ABSOLUT",

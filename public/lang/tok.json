@@ -46,8 +46,56 @@
     "home": {
         "beta": "ilo Sawisi li pini ala! ijo mute li ken ante!",
         "description": "ilo mute pi lipu Pxls",
+        "description.place": "ona li ilo r/place kin!",
         "createTemplate": "o pali e ilo sitelen",
         "addDiscordBot": "o jo e ilo pi ilo Siko"
+    },
+    "place": {
+        "createTemplate": {
+            "name": "o pali e sitelen lukin pi r/place!",
+            "contact": {
+                "label": "lon kulupu",
+                "placeholder": "o toki..."
+            },
+            "templates": {
+                "label": "sitelen lukin",
+                "addTemplate": "o pana"
+            },
+            "modal": {
+                "templateName": {
+                    "label": "nimi pi sitelen lukin",
+                    "placeholder": "o toki..."
+                },
+                "templateSources": {
+                    "label": "ilo sitelen pi sitelen lukin",
+                    "url": {
+                        "label": "ilo sitelen",
+                        "placeholder": "o toki...",
+                        "load": "o lanpan"
+                    },
+                    "add": "o pana",
+                    "remove": "o weka"
+                },
+                "x": {
+                    "label": "nanpa X"
+                },
+                "y": {
+                    "label": "nanpa Y"
+                },
+                "remove": "o weka",
+                "done": "o pini"
+            },
+            "whitelist": {
+                "label": "sitelen lukin pi kulupu pona",
+                "placeholder": "o toki...",
+                "button": "o pana"
+            },
+            "blacklist": {
+                "label": "sitelen lukin pi kulupu ike",
+                "placeholder": "o toki...",
+                "button": "o pana"
+            }
+        }
     },
     "pixelization": {
         "name": "o leko e sitelen",
