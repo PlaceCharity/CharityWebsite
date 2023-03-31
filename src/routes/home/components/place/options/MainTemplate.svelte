@@ -91,6 +91,32 @@
         }
     }
 
+    let jsonImport = "";
+    async function importTemplate() {
+        try {
+            let link = jsonImport;
+            const url = new URL(jsonImport);
+            if (url.protocol === "http:" || url.protocol === "https:") {
+                if (url.hash.substring(1).includes("jsontemplate") || url.search.substring(1).includes("jsontemplate")) {
+                    link = findJSONTemplateInParams(url.hash.substring(1)) || findJSONTemplateInParams(url.search.substring(1));
+                }
+            }
+            const response = await fetch(`https://pxls.space/cors/${link}`, {
+                method: 'GET'
+            });
+            const json = await response.json();
+            if (json !== undefined && json !== null) {
+                if (json.contact === undefined || json.contact === null) json.contact = "";
+                if (json.templates === undefined || json.templates === null) json.templates = [];
+                if (json.whitelist === undefined || json.whitelist === null) json.whitelist = [];
+                if (json.blacklist === undefined || json.blacklist === null) json.blacklist = [];
+                template = json;
+            }
+        } catch(e) {
+            return;
+        }
+    }
+
     export let template;
     export let modalOpen;
     export let subTemplate;
@@ -99,8 +125,8 @@
 </script>
 
 <div class="flex flex-col md:flex-row w-full items-start">
-    <div class="w-full justify-center items-center flex">
-        <div class="bg-base-100 w-full flex items-center justify-center rounded-xl p-6 shadow-xl m-4">
+    <div class="w-full justify-center items-center flex m-4">
+        <div class="bg-base-100 w-full flex items-center justify-center rounded-xl p-6 shadow-xl">
             <div class="form-control w-full font-patrickhand font-normal">
                 <label for="contact" class="label">
                     <span class="label-text">{$_("place.createTemplate.contact.label")}</span>
@@ -150,13 +176,17 @@
                         </div>
                         <div class="{template.blacklist.length  > 0 ? 'divider' : 'hidden'}" />
                         <input type="text" placeholder={$_("place.createTemplate.blacklist.placeholder")} class="input input-bordered w-full mb-2" bind:value={blacklistAdd}/>
-                        <button class="btn" on:click={whitelistTemplate}>{$_("place.createTemplate.blacklist.button")}</button>
+                        <button class="btn" on:click={blacklistTemplate}>{$_("place.createTemplate.blacklist.button")}</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="w-full justify-center items-center flex">
-        <div id="json" class="mockup-code w-full m-4"></div>
+    <div class="w-full justify-center items-center flex flex-col m-4">
+        <div id="json" class="mockup-code w-full"></div>
+        <div class="flex flex-row w-full justify-end mt-2">
+            <input type="text" placeholder={$_("place.createTemplate.import.placeholder")} class="input input-bordered w-full mr-2" bind:value={jsonImport}/>
+            <button class="btn" on:click={importTemplate}>{$_("place.createTemplate.import.button")}</button>
+        </div>
     </div>
 </div>

@@ -94,6 +94,10 @@
                 "label": "Blacklist",
                 "placeholder": "Type here...",
                 "button": "Blacklist"
+            },
+            "import": {
+                "button": "Import",
+                "placeholder": "Type here..."
             }
         }
     },

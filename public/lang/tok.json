@@ -94,6 +94,10 @@
                 "label": "sitelen lukin pi kulupu ike",
                 "placeholder": "o toki...",
                 "button": "o pana"
+            },
+            "import": {
+                "button": "o lanpan",
+                "placeholder": "o toki..."
             }
         }
     },
