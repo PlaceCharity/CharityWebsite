@@ -46,7 +46,7 @@
         gamma: 100,
         sharpen: 0,
         hue: 0,
-        palette: "0"
+        palette: "1"
     }
 
     function updatePixelated() {
