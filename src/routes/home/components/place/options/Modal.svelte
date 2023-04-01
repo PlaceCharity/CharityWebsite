@@ -95,7 +95,7 @@
     }
 
     async function loadURL(url) {
-        const response = await fetch(`https://pxls.space/cors/${url}`, {
+        const response = await fetch(`https://pxls.space/cors/${url}?cache=${Date.now()}`, {
             method: 'GET'
         });
         const blob = await response.blob();

@@ -97,7 +97,9 @@
             },
             "import": {
                 "button": "Import",
-                "placeholder": "Type here..."
+                "label": "Template JSON",
+                "placeholder": "Type here...",
+                "done": "Done"
             }
         }
     },

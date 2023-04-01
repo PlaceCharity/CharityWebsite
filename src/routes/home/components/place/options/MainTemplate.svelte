@@ -93,27 +93,13 @@
 
     let jsonImport = "";
     async function importTemplate() {
-        try {
-            let link = jsonImport;
-            const url = new URL(jsonImport);
-            if (url.protocol === "http:" || url.protocol === "https:") {
-                if (url.hash.substring(1).includes("jsontemplate") || url.search.substring(1).includes("jsontemplate")) {
-                    link = findJSONTemplateInParams(url.hash.substring(1)) || findJSONTemplateInParams(url.search.substring(1));
-                }
-            }
-            const response = await fetch(`https://pxls.space/cors/${link}`, {
-                method: 'GET'
-            });
-            const json = await response.json();
-            if (json !== undefined && json !== null) {
-                if (json.contact === undefined || json.contact === null) json.contact = "";
-                if (json.templates === undefined || json.templates === null) json.templates = [];
-                if (json.whitelist === undefined || json.whitelist === null) json.whitelist = [];
-                if (json.blacklist === undefined || json.blacklist === null) json.blacklist = [];
-                template = json;
-            }
-        } catch(e) {
-            return;
+        const json = JSON.parse(jsonImport);
+        if (json !== undefined && json !== null) {
+            if (json.contact === undefined || json.contact === null) json.contact = "";
+            if (json.templates === undefined || json.templates === null) json.templates = [];
+            if (json.whitelist === undefined || json.whitelist === null) json.whitelist = [];
+            if (json.blacklist === undefined || json.blacklist === null) json.blacklist = [];
+            template = json;
         }
     }
 
@@ -125,7 +111,7 @@
 </script>
 
 <div class="flex flex-col md:flex-row w-full items-start">
-    <div class="w-full justify-center items-center flex m-4">
+    <div class="w-0 grow justify-center items-center flex m-4">
         <div class="bg-base-100 w-full flex items-center justify-center rounded-xl p-6 shadow-xl">
             <div class="form-control w-full font-patrickhand font-normal">
                 <label for="contact" class="label">
@@ -182,11 +168,24 @@
             </div>
         </div>
     </div>
-    <div class="w-full justify-center items-center flex flex-col m-4">
-        <div id="json" class="mockup-code w-full"></div>
+    <div class="w-0 grow justify-center items-center flex flex-col m-4">
+        <input type="checkbox" id="importModal" class="modal-toggle" />
+        <div class="modal">
+            <div class="modal-box">
+                <div class="form-control">
+                    <label for="import" class="label">
+                      <span class="label-text">{$_("place.createTemplate.import.label")}</span>
+                    </label>
+                    <textarea class="textarea textarea-bordered h-24" placeholder={$_("place.createTemplate.import.placeholder")} bind:value={jsonImport}></textarea>
+                  </div>
+                <div class="modal-action">
+                    <label for="importModal" class="btn" on:click={importTemplate}>{$_("place.createTemplate.import.done")}</label>
+                </div>
+            </div>
+        </div>
+        <div id="json" class="mockup-code w-full overflow-scroll"></div>
         <div class="flex flex-row w-full justify-end mt-2">
-            <input type="text" placeholder={$_("place.createTemplate.import.placeholder")} class="input input-bordered w-full mr-2" bind:value={jsonImport}/>
-            <button class="btn" on:click={importTemplate}>{$_("place.createTemplate.import.button")}</button>
+            <label class="btn" for="importModal">{$_("place.createTemplate.import.button")}</label>
         </div>
     </div>
 </div>

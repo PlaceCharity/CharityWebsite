@@ -97,7 +97,9 @@
             },
             "import": {
                 "button": "o lanpan",
-                "placeholder": "o toki..."
+                "label": "lipu JSON pi sitelen lukin",
+                "placeholder": "o toki...",
+                "done": "o pini"
             }
         }
     },
