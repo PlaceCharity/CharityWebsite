@@ -87,11 +87,15 @@
             },
             "whitelist": {
                 "label": "Whitelist",
+                "name": "Name",
+                "url": "URL",
                 "placeholder": "Type here...",
                 "button": "Whitelist"
             },
             "blacklist": {
                 "label": "Blacklist",
+                "name": "Name",
+                "url": "URL",
                 "placeholder": "Type here...",
                 "button": "Blacklist"
             },

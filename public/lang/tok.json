@@ -87,11 +87,15 @@
             },
             "whitelist": {
                 "label": "sitelen lukin pi kulupu pona",
+                "name": "nimi pi sitelen lukin pi kulupu pona",
+                "url": "ilo pi sitelen lukin pi kulupu pona",
                 "placeholder": "o toki...",
                 "button": "o pana"
             },
             "blacklist": {
                 "label": "sitelen lukin pi kulupu ike",
+                "name": "nimi pi sitelen lukin pi kulupu ike",
+                "url": "ilo pi sitelen lukin pi kulupu ike",
                 "placeholder": "o toki...",
                 "button": "o pana"
             },

@@ -46,35 +46,35 @@
     "home": {
         "beta": "Чарити находится в бета-версии! Некоторые функции могут быть не завершены!",
         "description": "Шаблоны Pxls, информация и утилиты",
-        "description.place": "Now supporting r/place!",
+        "description.place": "Теперь поддерживает r/place!",
         "createTemplate": "Создать шаблон",
         "addDiscordBot": "Добавить нашего Discord-бота"
     },
     "place": {
         "createTemplate": {
-            "name": "Create an r/place Template!",
+            "name": "Создать шаблон r/place!",
             "contact": {
-                "label": "Contact Information",
-                "placeholder": "Type here..."
+                "label": "Контактная информация",
+                "placeholder": "Печатайте здесь..."
             },
             "templates": {
-                "label": "Templates",
-                "addTemplate": "Add Template"
+                "label": "Шаблоны",
+                "addTemplate": "Добавить шаблон"
             },
             "modal": {
                 "templateName": {
-                    "label": "Template Name",
-                    "placeholder": "Type here..."
+                    "label": "Название шаблона",
+                    "placeholder": "Печатайте здесь..."
                 },
                 "templateSources": {
-                    "label": "Template Sources",
+                    "label": "Источники шаблонов",
                     "url": {
-                        "label": "Template Image URL",
-                        "placeholder": "Type here...",
-                        "load": "Load"
+                        "label": "URL изображения шаблона",
+                        "placeholder": "Печатайте здесь...",
+                        "load": "Загрузить"
                     },
-                    "add": "Add Source",
-                    "remove": "Remove Source"
+                    "add": "Добавить источник",
+                    "remove": "Удалить источник"
                 },
                 "x": {
                     "label": "X"
@@ -82,24 +82,28 @@
                 "y": {
                     "label": "Y"
                 },
-                "remove": "Remove",
-                "done": "Done"
+                "remove": "Удалить",
+                "done": "Готово"
             },
             "whitelist": {
-                "label": "Whitelist",
-                "placeholder": "Type here...",
-                "button": "Whitelist"
+                "label": "Белый список",
+                "name": "Name",
+                "url": "URL",
+                "placeholder": "Печатайте здесь...",
+                "button": "В белый список"
             },
             "blacklist": {
-                "label": "Blacklist",
-                "placeholder": "Type here...",
-                "button": "Blacklist"
+                "label": "Чёрный список",
+                "name": "Name",
+                "url": "URL",
+                "placeholder": "Печатайте здесь...",
+                "button": "В чёрный список"
             },
             "import": {
-                "button": "Import",
-                "label": "Template JSON",
-                "placeholder": "Type here...",
-                "done": "Done"
+                "button": "Импорт",
+                "label": "JSON шаблона",
+                "placeholder": "Печатайте здесь...",
+                "done": "Готово"
             }
         }
     },

@@ -55,16 +55,17 @@
         return params.jsontemplate ? params.jsontemplate : null;
     }
 
-    let whitelistAdd = "";
+    let whitelistName = "";
+    let whitelistURL = "";
 
     function whitelistTemplate() {
         try {
-            const url = new URL(whitelistAdd);
+            const url = new URL(whitelistURL);
             if (url.protocol === "http:" || url.protocol === "https:") {
                 if (url.hash.substring(1).includes("jsontemplate") || url.search.substring(1).includes("jsontemplate")) {
                     template.whitelist.push(findJSONTemplateInParams(url.hash.substring(1)) || findJSONTemplateInParams(url.search.substring(1)));
                 } else {
-                    template.whitelist.push(whitelistAdd);
+                    template.whitelist.push({name: whitelistName, url: whitelistURL});
                 }
                 template = template;
             }
@@ -73,16 +74,17 @@
         }
     }
 
-    let blacklistAdd = "";
+    let blacklistName = "";
+    let blacklistURL = "";
 
     function blacklistTemplate() {
         try {
-            const url = new URL(blacklistAdd);
+            const url = new URL(blacklistURL);
             if (url.protocol === "http:" || url.protocol === "https:") {
                 if (url.hash.substring(1).includes("jsontemplate") || url.search.substring(1).includes("jsontemplate")) {
                     template.blacklist.push(findJSONTemplateInParams(url.hash.substring(1)) || findJSONTemplateInParams(url.search.substring(1)));
                 } else {
-                    template.blacklist.push(blacklistAdd);
+                    template.blacklist.push({name: blacklistName, url: blacklistURL});
                 }
                 template = template;
             }
@@ -141,11 +143,18 @@
                     <div class="collapse-content">
                         <div class="w-full">
                             {#each template.whitelist as whitelisted}
-                                <button class="btn btn-error w-full mb-2" on:click={() => {template.whitelist = template.whitelist.filter(wl => wl !== whitelisted)}}>{whitelisted}</button>
+                                <button class="btn btn-error w-full mb-2" on:click={() => {template.whitelist = template.whitelist.filter(wl => wl !== whitelisted)}}>{whitelisted.name}</button>
                             {/each}
                         </div>
                         <div class="{template.whitelist.length  > 0 ? 'divider' : 'hidden'}" />
-                        <input type="text" placeholder={$_("place.createTemplate.whitelist.placeholder")} class="input input-bordered w-full mb-2" bind:value={whitelistAdd}/>
+                        <label for="name" class="label">
+                            <span class="label-text">{$_("place.createTemplate.whitelist.name")}</span>
+                        </label>
+                        <input type="text" placeholder={$_("place.createTemplate.whitelist.placeholder")} class="input input-bordered w-full mb-2" bind:value={whitelistName}/>
+                        <label for="url" class="label">
+                            <span class="label-text">{$_("place.createTemplate.whitelist.url")}</span>
+                        </label>
+                        <input type="text" placeholder={$_("place.createTemplate.whitelist.placeholder")} class="input input-bordered w-full mb-2" bind:value={whitelistURL}/>
                         <button class="btn" on:click={whitelistTemplate}>{$_("place.createTemplate.whitelist.button")}</button>
                     </div>
                 </div>
@@ -157,11 +166,18 @@
                     <div class="collapse-content">
                         <div class="w-full">
                             {#each template.blacklist as blacklisted}
-                                <button class="btn btn-error w-full mb-2" on:click={() => {template.blacklist = template.blacklist.filter(wl => wl !== blacklisted)}}>{blacklisted}</button>
+                                <button class="btn btn-error w-full mb-2" on:click={() => {template.blacklist = template.blacklist.filter(wl => wl !== blacklisted)}}>{blacklisted.name}</button>
                             {/each}
                         </div>
                         <div class="{template.blacklist.length  > 0 ? 'divider' : 'hidden'}" />
-                        <input type="text" placeholder={$_("place.createTemplate.blacklist.placeholder")} class="input input-bordered w-full mb-2" bind:value={blacklistAdd}/>
+                        <label for="name" class="label">
+                            <span class="label-text">{$_("place.createTemplate.blacklist.name")}</span>
+                        </label>
+                        <input type="text" placeholder={$_("place.createTemplate.blacklist.placeholder")} class="input input-bordered w-full mb-2" bind:value={blacklistName}/>
+                        <label for="url" class="label">
+                            <span class="label-text">{$_("place.createTemplate.blacklist.url")}</span>
+                        </label>
+                        <input type="text" placeholder={$_("place.createTemplate.blacklist.placeholder")} class="input input-bordered w-full mb-2" bind:value={blacklistURL}/>
                         <button class="btn" on:click={blacklistTemplate}>{$_("place.createTemplate.blacklist.button")}</button>
                     </div>
                 </div>
